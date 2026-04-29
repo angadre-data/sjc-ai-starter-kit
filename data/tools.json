@@ -1,0 +1,686 @@
+[
+  {
+    "name": "Gemini",
+    "category": "LLM",
+    "status": "Using",
+    "bestFor": [
+      "Google Workspace workflows",
+      "Research summaries",
+      "Drafting and ideation"
+    ],
+    "commonUses": [
+      "Content briefs",
+      "Headline drafting",
+      "SEO titles and meta descriptions",
+      "Newsletter copy",
+      "Analytics summaries"
+    ],
+    "watchouts": [
+      "Check all factual claims before use.",
+      "Do not use as a final proofreader.",
+      "Outputs can miss nuance in sensitive topics."
+    ],
+    "where": "Available via Google Workspace — Gemini side panel in Docs, Gmail, and Slides",
+    "teams": [
+      "All"
+    ]
+  },
+  {
+    "name": "Gemini Gems",
+    "category": "LLM / Agent",
+    "status": "Using",
+    "bestFor": [
+      "Custom AI assistants tuned to SJC brand voice",
+      "Analytics workflows",
+      "Style guide enforcement"
+    ],
+    "commonUses": [
+      "Brand voice review",
+      "Image alt text generation",
+      "Analytics interpretation",
+      "Custom editorial assistants"
+    ],
+    "watchouts": [
+      "Gem quality depends on how well the system prompt is written.",
+      "Review and refresh Gem instructions regularly."
+    ],
+    "where": "gemini.google.com — create Gems in the left panel",
+    "teams": [
+      "Editorial",
+      "Analytics",
+      "Branded Content"
+    ]
+  },
+  {
+    "name": "NotebookLM",
+    "category": "Research",
+    "status": "Using",
+    "bestFor": [
+      "Summarizing long documents",
+      "Research synthesis",
+      "Q&A against source material"
+    ],
+    "commonUses": [
+      "Research briefs from multiple PDFs",
+      "Editorial backgrounders",
+      "Source analysis"
+    ],
+    "watchouts": [
+      "Only works with sources you upload — it cannot browse the web.",
+      "Always verify quotes pulled from sources."
+    ],
+    "where": "notebooklm.google.com",
+    "teams": [
+      "Editorial",
+      "Sales",
+      "Branded Content"
+    ]
+  },
+  {
+    "name": "ChatGPT",
+    "category": "LLM",
+    "status": "Using",
+    "bestFor": [
+      "Drafting",
+      "RFP responses",
+      "Recruitment materials",
+      "Long-form rewrites"
+    ],
+    "commonUses": [
+      "Sales pitches",
+      "Job descriptions",
+      "Social captions",
+      "Meeting prep"
+    ],
+    "watchouts": [
+      "Can hallucinate confidently — verify all facts.",
+      "Avoid pasting confidential client data."
+    ],
+    "where": "chatgpt.com — use the organizational account where available",
+    "teams": [
+      "All"
+    ]
+  },
+  {
+    "name": "Claude",
+    "category": "LLM",
+    "status": "Using",
+    "bestFor": [
+      "Sales pitch writing",
+      "Brand voice maintenance",
+      "Long document analysis"
+    ],
+    "commonUses": [
+      "Inventory management summaries",
+      "Pitch deck narratives",
+      "RFP drafts",
+      "Contract review support"
+    ],
+    "watchouts": [
+      "Has a knowledge cutoff — do not rely on it for current events.",
+      "Outputs should be reviewed before sharing externally."
+    ],
+    "where": "claude.ai",
+    "teams": [
+      "Sales",
+      "Operations",
+      "Branded Content"
+    ]
+  },
+  {
+    "name": "Perplexity",
+    "category": "Research",
+    "status": "Using",
+    "bestFor": [
+      "Real-time research",
+      "Competitive intelligence",
+      "Quick fact-finding with citations"
+    ],
+    "commonUses": [
+      "Advertiser background research",
+      "Industry trends",
+      "SEO content gap research"
+    ],
+    "watchouts": [
+      "Citations can be imprecise — always click through and verify.",
+      "Not a substitute for primary source journalism."
+    ],
+    "where": "perplexity.ai",
+    "teams": [
+      "Editorial",
+      "Sales",
+      "Marketing"
+    ]
+  },
+  {
+    "name": "ClickUp AI / ClickUp Brain",
+    "category": "Productivity",
+    "status": "Using",
+    "bestFor": [
+      "Workflow automation",
+      "Task management",
+      "Project summaries"
+    ],
+    "commonUses": [
+      "Auto-generating task descriptions",
+      "Summarizing project threads",
+      "Status updates"
+    ],
+    "watchouts": [
+      "Only effective if your ClickUp workspace is well organized.",
+      "Review generated tasks before assigning."
+    ],
+    "where": "app.clickup.com — Brain is built into the workspace",
+    "teams": [
+      "Operations",
+      "Editorial",
+      "Marketing"
+    ]
+  },
+  {
+    "name": "ClickUp Agents",
+    "category": "Agent",
+    "status": "Pilot",
+    "bestFor": [
+      "Editorial queue prioritization",
+      "Content brief generation from task metadata",
+      "Automated workflow steps"
+    ],
+    "commonUses": [
+      "Triggering brief generation when a story is approved",
+      "Assigning tasks based on team capacity"
+    ],
+    "watchouts": [
+      "Pilot phase — results vary. Test before relying on for deadlines.",
+      "Agent actions may need manual review."
+    ],
+    "where": "app.clickup.com — Agents section in pilot workspaces",
+    "teams": [
+      "Editorial",
+      "Operations"
+    ]
+  },
+  {
+    "name": "Otter",
+    "category": "Transcription",
+    "status": "Using",
+    "bestFor": [
+      "Interview transcription",
+      "Meeting notes",
+      "Real-time captioning"
+    ],
+    "commonUses": [
+      "Journalist interview transcripts",
+      "Editorial meeting notes",
+      "Source quotes extraction"
+    ],
+    "watchouts": [
+      "Accuracy varies with audio quality and accents.",
+      "Always review transcript before quoting."
+    ],
+    "where": "otter.ai",
+    "teams": [
+      "Editorial",
+      "All"
+    ]
+  },
+  {
+    "name": "DeepL",
+    "category": "Translation",
+    "status": "Using",
+    "bestFor": [
+      "EN to FR translation",
+      "FR to EN back-translation",
+      "Quick translation drafts"
+    ],
+    "commonUses": [
+      "Chatelaine and Today's Parent bilingual content",
+      "Press releases",
+      "Legal and marketing copy"
+    ],
+    "watchouts": [
+      "Cultural nuance may be lost — always have a native speaker review final copy.",
+      "Do not use DeepL output as final published translation."
+    ],
+    "where": "deepl.com",
+    "teams": [
+      "Editorial",
+      "Chatelaine",
+      "Today's Parent"
+    ]
+  },
+  {
+    "name": "Grammarly",
+    "category": "Writing",
+    "status": "Using",
+    "bestFor": [
+      "Copy editing",
+      "Grammar and style checking",
+      "Tone adjustments"
+    ],
+    "commonUses": [
+      "Proofreading before send",
+      "Email polish",
+      "Sales deck language"
+    ],
+    "watchouts": [
+      "Do not rely on Grammarly as the only editorial check.",
+      "Style suggestions may conflict with house style."
+    ],
+    "where": "grammarly.com — browser extension and desktop app",
+    "teams": [
+      "All"
+    ]
+  },
+  {
+    "name": "Looker Studio",
+    "category": "Analytics",
+    "status": "Using",
+    "bestFor": [
+      "Data visualization",
+      "Dashboard building",
+      "Report sharing"
+    ],
+    "commonUses": [
+      "Weekly editorial dashboards",
+      "Campaign performance reports",
+      "Revenue tracking"
+    ],
+    "watchouts": [
+      "Visuals only reflect the quality of underlying data.",
+      "Dashboards should include data freshness labels."
+    ],
+    "where": "lookerstudio.google.com",
+    "teams": [
+      "Analytics",
+      "Editorial",
+      "Marketing"
+    ]
+  },
+  {
+    "name": "GA4",
+    "category": "Analytics",
+    "status": "Using",
+    "bestFor": [
+      "Web analytics",
+      "Audience behavior",
+      "Content performance tracking"
+    ],
+    "commonUses": [
+      "Article page views and engagement",
+      "Traffic source analysis",
+      "Newsletter referral tracking"
+    ],
+    "watchouts": [
+      "GA4 has a learning curve — use Looker Studio reports for simpler views.",
+      "Sampling applies to large date ranges."
+    ],
+    "where": "analytics.google.com",
+    "teams": [
+      "Analytics",
+      "Editorial",
+      "Marketing"
+    ]
+  },
+  {
+    "name": "Statera",
+    "category": "Analytics",
+    "status": "Using",
+    "bestFor": [
+      "SJC-specific content and revenue analytics",
+      "Cross-brand reporting"
+    ],
+    "commonUses": [
+      "Content ROI analysis",
+      "Audience benchmarks",
+      "Revenue reporting"
+    ],
+    "watchouts": [
+      "Internal platform — contact the Data & Analytics team for access.",
+      "Use alongside GA4, not as a replacement."
+    ],
+    "where": "Internal — contact Data & Analytics team",
+    "teams": [
+      "Analytics",
+      "Editorial",
+      "Sales"
+    ]
+  },
+  {
+    "name": "Canva",
+    "category": "Design",
+    "status": "Using",
+    "bestFor": [
+      "Social graphics",
+      "Event assets",
+      "Quick visual layouts"
+    ],
+    "commonUses": [
+      "Instagram and Facebook graphics",
+      "Event banners",
+      "Presentation templates"
+    ],
+    "watchouts": [
+      "Maintain brand template consistency.",
+      "AI Magic features need content review before use."
+    ],
+    "where": "canva.com — use the SJC team workspace",
+    "teams": [
+      "Marketing",
+      "Social",
+      "Branded Content"
+    ]
+  },
+  {
+    "name": "Adobe Express",
+    "category": "Design",
+    "status": "Using",
+    "bestFor": [
+      "Quick graphics",
+      "Social assets",
+      "Animated posts"
+    ],
+    "commonUses": [
+      "Story templates",
+      "Quick ad banners",
+      "Brand-consistent social images"
+    ],
+    "watchouts": [
+      "Review AI-generated image suggestions for rights and appropriateness.",
+      "Use within brand color and typography guidelines."
+    ],
+    "where": "adobe.com/express — included in Adobe Creative Cloud",
+    "teams": [
+      "Marketing",
+      "Social",
+      "Video"
+    ]
+  },
+  {
+    "name": "MidJourney",
+    "category": "Image",
+    "status": "Exploring",
+    "bestFor": [
+      "AI illustrations",
+      "Concept visuals for Chatelaine",
+      "Mood board generation"
+    ],
+    "commonUses": [
+      "Editorial illustration drafts",
+      "Visual concept exploration"
+    ],
+    "watchouts": [
+      "Do not use AI-generated images on covers without editorial approval.",
+      "Always disclose AI-generated imagery to readers.",
+      "Avoid generating images of real people."
+    ],
+    "where": "midjourney.com — Discord-based interface",
+    "teams": [
+      "Editorial",
+      "Chatelaine"
+    ]
+  },
+  {
+    "name": "Runway",
+    "category": "Video",
+    "status": "Exploring",
+    "bestFor": [
+      "AI video generation",
+      "Video concept proofs",
+      "Motion graphics"
+    ],
+    "commonUses": [
+      "Short-form concept clips",
+      "Social video experiments"
+    ],
+    "watchouts": [
+      "Do not use AI-generated footage of real people.",
+      "Outputs are for concept/exploration only at this stage.",
+      "Disclose AI-generated video content."
+    ],
+    "where": "runwayml.com",
+    "teams": [
+      "Video"
+    ]
+  },
+  {
+    "name": "Submagic",
+    "category": "Video",
+    "status": "Using",
+    "bestFor": [
+      "Auto-captions for social video",
+      "Short-form clip editing",
+      "Caption styling"
+    ],
+    "commonUses": [
+      "Instagram Reels captions",
+      "TikTok subtitles",
+      "YouTube Shorts"
+    ],
+    "watchouts": [
+      "Review captions for accuracy before publishing.",
+      "Timing corrections may be needed for fast speech."
+    ],
+    "where": "submagic.co",
+    "teams": [
+      "Video",
+      "Social"
+    ]
+  },
+  {
+    "name": "CapCut",
+    "category": "Video",
+    "status": "Using",
+    "bestFor": [
+      "Short-form video editing",
+      "Mobile-friendly clip production",
+      "Template-based video assembly"
+    ],
+    "commonUses": [
+      "Reels and TikTok editing",
+      "Quick highlight clips",
+      "Social video packaging"
+    ],
+    "watchouts": [
+      "Use the business version to avoid consumer watermarks.",
+      "Review auto-captions before posting."
+    ],
+    "where": "capcut.com",
+    "teams": [
+      "Video",
+      "Social"
+    ]
+  },
+  {
+    "name": "Descript",
+    "category": "Audio / Video",
+    "status": "Using",
+    "bestFor": [
+      "Podcast editing",
+      "Video editing by text transcript",
+      "Filler word removal"
+    ],
+    "commonUses": [
+      "Podcast post-production",
+      "Video interviews",
+      "Long-form video editing"
+    ],
+    "watchouts": [
+      "Do not use AI voice cloning features without explicit consent.",
+      "Review transcript edits against original audio."
+    ],
+    "where": "descript.com",
+    "teams": [
+      "Video",
+      "Editorial"
+    ]
+  },
+  {
+    "name": "ElevenLabs",
+    "category": "Audio",
+    "status": "Exploring",
+    "bestFor": [
+      "AI voiceovers",
+      "Text-to-speech prototyping",
+      "Multilingual audio"
+    ],
+    "commonUses": [
+      "Prototype voiceover for video concepts",
+      "Accessibility audio drafts"
+    ],
+    "watchouts": [
+      "Do not clone real people's voices without explicit written consent.",
+      "Do not use synthetic voices in published editorial audio without disclosure.",
+      "This is in early exploration — consult editorial leadership before use."
+    ],
+    "where": "elevenlabs.io",
+    "teams": [
+      "Video"
+    ]
+  },
+  {
+    "name": "Sprout Social",
+    "category": "Social",
+    "status": "Using",
+    "bestFor": [
+      "Social media management",
+      "Scheduling",
+      "Engagement tracking"
+    ],
+    "commonUses": [
+      "Cross-platform publishing",
+      "Social analytics",
+      "Community management"
+    ],
+    "watchouts": [
+      "AI caption suggestions need brand voice review.",
+      "Confirm image rights before scheduling."
+    ],
+    "where": "sproutsocial.com — contact Marketing for access",
+    "teams": [
+      "Social",
+      "Marketing"
+    ]
+  },
+  {
+    "name": "Sailthru",
+    "category": "Email",
+    "status": "Using",
+    "bestFor": [
+      "Newsletter platform",
+      "Audience segmentation",
+      "Email automation"
+    ],
+    "commonUses": [
+      "Daily and weekly newsletters",
+      "Personalized email journeys",
+      "Subscriber analytics"
+    ],
+    "watchouts": [
+      "AI personalization features need accuracy review.",
+      "Test all templates before scheduling sends."
+    ],
+    "where": "sailthru.com — contact Marketing for access",
+    "teams": [
+      "Marketing",
+      "Editorial"
+    ]
+  },
+  {
+    "name": "Zapier",
+    "category": "Automation",
+    "status": "Exploring",
+    "bestFor": [
+      "Workflow automation",
+      "App-to-app data routing",
+      "Trigger-based tasks"
+    ],
+    "commonUses": [
+      "Auto-creating ClickUp tasks from form submissions",
+      "Newsletter workflow triggers"
+    ],
+    "watchouts": [
+      "Automation errors can propagate quickly — test thoroughly.",
+      "Do not automate steps that require editorial judgment."
+    ],
+    "where": "zapier.com",
+    "teams": [
+      "Operations",
+      "Marketing"
+    ]
+  },
+  {
+    "name": "Supernormal",
+    "category": "Meetings",
+    "status": "Using",
+    "bestFor": [
+      "AI meeting notes",
+      "Action item extraction",
+      "Meeting summaries"
+    ],
+    "commonUses": [
+      "Editorial stand-up notes",
+      "Cross-team project meetings",
+      "Client call summaries"
+    ],
+    "watchouts": [
+      "Notify participants that the meeting is being recorded.",
+      "Review action items before distributing — assignments may be incorrect."
+    ],
+    "where": "supernormal.com — connects to Google Meet and Zoom",
+    "teams": [
+      "All"
+    ]
+  },
+  {
+    "name": "Granola AI",
+    "category": "Meetings",
+    "status": "Using",
+    "bestFor": [
+      "Structured meeting notes",
+      "Follow-up email drafts from meetings",
+      "Decision logs"
+    ],
+    "commonUses": [
+      "Editorial planning meetings",
+      "Strategy sessions",
+      "One-on-one notes"
+    ],
+    "watchouts": [
+      "Do not share Granola notes externally without review.",
+      "Check that action items are attributed correctly."
+    ],
+    "where": "granola.so — Mac app",
+    "teams": [
+      "All"
+    ]
+  },
+  {
+    "name": "GPTZero",
+    "slug": "gptzero",
+    "category": "Writing / Verification",
+    "status": "Exploring",
+    "bestFor": [
+      "Checking AI content percentage in drafts",
+      "Verifying that copy still sounds human",
+      "Editorial integrity review"
+    ],
+    "commonUses": [
+      "Post-edit check on AI-assisted drafts",
+      "Brand voice integrity check before publishing",
+      "Flagging over-reliance on AI phrasing"
+    ],
+    "watchouts": [
+      "Scores are probabilistic, not definitive — a high AI score does not mean the writing is wrong",
+      "Use as a signal to iterate, not a pass/fail gate",
+      "False positives exist — human writers can score as AI",
+      "Does not replace editorial judgment"
+    ],
+    "teams": [
+      "Editorial",
+      "Branded Content",
+      "Marketing"
+    ],
+    "pricingNote": "Free tier available at gptzero.me"
+  }
+]

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SJC AI Starter Kit</title>
+  <meta name="description" content="Copy-ready AI recipes, prompts, and examples for real SJC workflows.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">SJC AI Starter Kit</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="prompts.html">Prompts</a></li>
+      <li><a href="tools.html">Tool Chooser</a></li>
+      <li><a href="aha-archive.html">Aha Archive</a></li>
+      <li><a href="submit.html">Submit</a></li>
+      <li><a href="responsible-use.html">Responsible Use</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title">SJC AI Starter Kit</h1>
+    <p class="subtitle">Copy-ready AI recipes, prompts, and examples for real SJC workflows.</p>
+    <p class="body-copy">This starter kit helps teams move from isolated experimentation to shared capability. Start with a task, choose a recipe, adapt the prompt, check the output, and share what you learn.</p>
+    <div class="hero-ctas">
+      <a href="recipes.html" class="btn btn-primary">Browse Recipes</a>
+      <a href="prompts.html" class="btn btn-secondary">Find a Prompt</a>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Value cards -->
+    <section aria-labelledby="value-heading" style="padding-top:48px;">
+      <h2 id="value-heading" class="sr-only">Why this kit</h2>
+      <div class="value-cards">
+        <div class="value-card">
+          <div class="icon">📋</div>
+          <h3>No blank page</h3>
+          <p>Start with practical workflows and prompts you can copy today. Every recipe includes a ready-to-use prompt and human-check guidance.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon">🏢</div>
+          <h3>Built around SJC use cases</h3>
+          <p>Examples reflect editorial, sales, marketing, video, analytics, and operations workflows — not generic AI demos.</p>
+        </div>
+        <div class="value-card">
+          <div class="icon">👤</div>
+          <h3>Human judgment stays central</h3>
+          <p>AI can draft, summarize, reformat, and suggest. People still decide. Every recipe includes a clear human-check step.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to use -->
+    <section aria-labelledby="howto-heading" style="padding-top:16px;">
+      <div class="section-header">
+        <h2 id="howto-heading">How to use this site</h2>
+        <p>Four steps. No preparation required.</p>
+      </div>
+      <div class="steps-row">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Pick a task</h3>
+          <p>What do you need to get done? Start with the task, not the tool.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Choose a recipe</h3>
+          <p>Find the workflow that fits. Filter by team, tool, or difficulty.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Copy and adapt the prompt</h3>
+          <p>Replace the bracketed fields with your context and paste it in.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <h3>Check the output and share</h3>
+          <p>Apply the human-check steps. If it worked, submit it back to the library.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- May 6 banner -->
+    <div class="showntell-banner" role="complementary" aria-label="May 6 Show and Tell">
+      <div class="banner-text">
+        <span class="banner-tag">May 6 AI Show &amp; Tell</span>
+        <h2>Built for the May 6 AI Show &amp; Tell</h2>
+        <p>You do not need to prepare, study, or become an AI expert before using this. Come with curiosity. Leave with recipes, prompts, examples, and a shared place to keep learning.</p>
+      </div>
+    </div>
+
+    <!-- Featured recipes -->
+    <section aria-labelledby="featured-heading">
+      <div class="section-header">
+        <h2 id="featured-heading">Start here</h2>
+        <p>Six recipes to try today. Each includes a copy-ready prompt.</p>
+      </div>
+      <div id="recipes-container" class="cards-grid" aria-live="polite">
+        <p style="color:var(--text-muted);font-size:14px;">Loading recipes… If recipes do not appear, run <code>python3 -m http.server 8000</code> and open <a href="http://localhost:8000">localhost:8000</a>.</p>
+      </div>
+      <div style="margin-top:24px;text-align:center;">
+        <a href="recipes.html" class="btn btn-teal">View all recipes</a>
+      </div>
+    </section>
+
+    <!-- Starter paths -->
+    <section aria-labelledby="paths-heading" style="padding-top:16px;">
+      <div class="section-header">
+        <h2 id="paths-heading">Start by team</h2>
+        <p>Jump to recipes and prompts filtered for your role.</p>
+      </div>
+      <div class="starter-paths">
+        <a href="recipes.html?team=Editorial" class="starter-path"><span class="path-icon">✍️</span>Editorial</a>
+        <a href="recipes.html?team=Sales" class="starter-path"><span class="path-icon">📊</span>Sales</a>
+        <a href="recipes.html?team=Marketing" class="starter-path"><span class="path-icon">📣</span>Marketing</a>
+        <a href="recipes.html?team=Video" class="starter-path"><span class="path-icon">🎬</span>Video</a>
+        <a href="recipes.html?team=Operations" class="starter-path"><span class="path-icon">⚙️</span>Operations</a>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- AI literacy -->
+    <div class="literacy-section" role="complementary">
+      <h2>Part of SJC's AI literacy plan</h2>
+      <p>This starter kit supports SJC's AI literacy goals by making successful use cases tangible, repeatable, and easy to share. It is designed to serve as the internal use-case library described in the 2026 AI roadmap — ready for future contributions from teams across all brands.</p>
+      <div style="margin-top:16px;"><a href="responsible-use.html" class="btn btn-outline">Read our responsible-use guidelines</a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p><strong>SJC AI Starter Kit</strong> &mdash; Author: Data &amp; Analytics Team</p>
+    <p>Built to support AI literacy, practical experimentation, and shared learning.</p>
+    <p style="margin-top:8px;">Version 0.1 &mdash; May 2026</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool Chooser — SJC AI Starter Kit</title>
+  <meta name="description" content="Start with the task, not the tool. Find the right AI for what you need to do.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">SJC AI Starter Kit</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="prompts.html">Prompts</a></li>
+      <li><a href="tools.html">Tool Chooser</a></li>
+      <li><a href="aha-archive.html">Aha Archive</a></li>
+      <li><a href="submit.html">Submit</a></li>
+      <li><a href="responsible-use.html">Responsible Use</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+  <div class="container">
+    <div class="page-intro">
+      <h1>Which AI should I use?</h1>
+      <p class="subtitle">Start with the task, not the tool.</p>
+      <p style="font-size:15px;color:var(--text-muted);margin-top:8px;max-width:640px;">There is no single best AI tool. The best choice depends on what you are trying to do, what context you have, and where the output needs to go next.</p>
+    </div>
+
+    <div class="page-body">
+      <!-- Task selector -->
+      <section aria-labelledby="chooser-heading">
+        <h2 id="chooser-heading" style="font-size:18px;font-weight:700;margin-bottom:16px;">What are you trying to do?</h2>
+        <div id="chooser-grid" class="tool-chooser-grid" role="group" aria-label="Task options"></div>
+        <div id="chooser-result" class="chooser-result" aria-live="polite" aria-atomic="true"></div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- Full tool directory -->
+      <section aria-labelledby="tools-heading">
+        <div class="section-header">
+          <h2 id="tools-heading">Tool Directory</h2>
+          <p>All AI tools in use or under evaluation at SJC. Filter by category or status.</p>
+        </div>
+
+        <div class="filter-bar" role="search" aria-label="Filter tools">
+          <div class="filter-group filter-search">
+            <label for="tool-search">Search</label>
+            <input type="text" id="tool-search" placeholder="Search tools…" aria-label="Search tools">
+          </div>
+          <div class="filter-group">
+            <label for="filter-tool-cat">Category</label>
+            <select id="filter-tool-cat" aria-label="Filter by category">
+              <option value="">All categories</option>
+              <option>LLM</option>
+              <option>Research</option>
+              <option>Transcription</option>
+              <option>Translation</option>
+              <option>Productivity</option>
+              <option>Automation</option>
+              <option>Analytics</option>
+              <option>Design</option>
+              <option>Image Generation</option>
+              <option>Video</option>
+              <option>Audio</option>
+              <option>Social Media</option>
+              <option>Email / Newsletter</option>
+              <option>Meeting Notes</option>
+              <option>Writing / Verification</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="filter-tool-status">Status</label>
+            <select id="filter-tool-status" aria-label="Filter by status">
+              <option value="">All statuses</option>
+              <option>Using</option>
+              <option>Exploring</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="results-count" id="tools-count" aria-live="polite"></p>
+        <div id="tools-container" class="cards-grid" aria-live="polite">
+          <p style="color:var(--text-muted);">Loading tools…</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p><strong>SJC AI Starter Kit</strong> &mdash; Author: Data &amp; Analytics Team</p>
+    <p>Built to support AI literacy, practical experimentation, and shared learning.</p>
+    <p style="margin-top:8px;">Version 0.1 &mdash; May 2026</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

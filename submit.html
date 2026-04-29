@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit — SJC AI Starter Kit</title>
+  <meta name="description" content="Add a recipe, aha moment, or tool note to the SJC AI Starter Kit.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">SJC AI Starter Kit</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="prompts.html">Prompts</a></li>
+      <li><a href="tools.html">Tool Chooser</a></li>
+      <li><a href="aha-archive.html">Aha Archive</a></li>
+      <li><a href="submit.html">Submit</a></li>
+      <li><a href="responsible-use.html">Responsible Use</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+  <div class="container">
+    <div class="page-intro">
+      <h1>Help build the library</h1>
+      <p class="subtitle">The best examples come from real work.</p>
+      <p style="font-size:15px;color:var(--text-muted);margin-top:8px;max-width:640px;">If AI helped you save time, improve a draft, spot a mistake, or rethink a workflow — add it here so others can learn from it. Small examples are welcome. Useful failures are especially welcome.</p>
+    </div>
+
+    <div class="page-body">
+      <div class="callout callout-info" style="margin-bottom:32px;">
+        <span class="callout-icon">📤</span>
+        <div class="callout-body">
+          <strong>How to submit</strong>
+          <p>Copy the template below, fill it in, and send it to the Data &amp; Analytics Team via Slack (<strong>#ai-starter-kit</strong>) or email. We will review and add it to the library.</p>
+        </div>
+      </div>
+
+      <!-- Submit a recipe -->
+      <div class="submit-section">
+        <h2>Submit a recipe</h2>
+        <p>Use this template to share a workflow that worked. It does not need to be perfect — the goal is to make it repeatable for others.</p>
+        <div class="template-block" id="recipe-template">Recipe name:
+Team:
+Tool(s) used:
+Status: [Ready to use / Pilot / Exploring]
+Difficulty: [Beginner / Intermediate / Advanced]
+Estimated time saved:
+
+Use when:
+[Describe the situation where this recipe is useful]
+
+Inputs needed:
+-
+-
+
+Steps:
+1.
+2.
+3.
+
+Prompt (copy-paste ready):
+[Paste your prompt here, using [BRACKETS] for the fields someone would replace]
+
+Example output summary:
+[Describe or paste a sample of what good output looks like]
+
+Human check steps:
+-
+-
+
+What changed or what was the impact:
+[Optional: time saved, quality improvement, or unexpected result]</div>
+        <div style="margin-top:12px;">
+          <button class="copy-btn" onclick="copyTemplate('recipe-template', this)" aria-label="Copy recipe template">Copy template</button>
+        </div>
+      </div>
+
+      <!-- Submit an aha -->
+      <div class="submit-section">
+        <h2>Submit an aha moment</h2>
+        <p>An aha can be a better prompt, a useful failure, a surprising result, or a 15-minute win. The format is the same regardless of how big or small it was.</p>
+        <div class="template-block" id="aha-template">Team:
+Title (one sentence — what did you learn?):
+
+What I tried:
+[Describe what you were trying to do and how you used AI]
+
+What surprised me:
+[What was unexpected — good or bad]
+
+What worked:
+[What approach or prompt produced useful output]
+
+What failed:
+[What did not work, and why you think it failed]
+
+What I would do differently next time:
+[Your recommendation for others]
+
+Prompt or output link (if shareable):
+[Optional]</div>
+        <div style="margin-top:12px;">
+          <button class="copy-btn" onclick="copyTemplate('aha-template', this)" aria-label="Copy aha template">Copy template</button>
+        </div>
+      </div>
+
+      <!-- Submit a tool note -->
+      <div class="submit-section">
+        <h2>Submit a tool note</h2>
+        <p>Found a tool that saved you time, or discovered a watchout others should know about? Add it here.</p>
+        <div class="template-block" id="tool-template">Tool name:
+Category: [LLM / Research / Transcription / Translation / Video / Design / Analytics / Automation / Other]
+Team:
+Status: [Using / Exploring]
+Pricing: [Free / Free tier + paid / Paid only]
+
+What it's good for:
+-
+-
+
+Common uses at SJC:
+-
+
+Watchouts:
+-
+
+Recommendation:
+[Would you recommend this tool to other teams? Why or why not?]</div>
+        <div style="margin-top:12px;">
+          <button class="copy-btn" onclick="copyTemplate('tool-template', this)" aria-label="Copy tool template">Copy template</button>
+        </div>
+      </div>
+
+      <hr class="section-divider">
+      <p style="text-align:center;color:var(--text-muted);font-size:14px;">Send completed templates to <strong>#ai-starter-kit</strong> on Slack or email the Data &amp; Analytics Team.<br>We review submissions weekly and aim to add approved entries within a few days.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p><strong>SJC AI Starter Kit</strong> &mdash; Author: Data &amp; Analytics Team</p>
+    <p>Built to support AI literacy, practical experimentation, and shared learning.</p>
+    <p style="margin-top:8px;">Version 0.1 &mdash; May 2026</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+function copyTemplate(id, btn) {
+  const text = document.getElementById(id).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✓ Copied';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copy template'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Recipe Library — SJC AI Starter Kit</title>
+  <meta name="description" content="Repeatable AI workflows for common SJC tasks. Filter by team, tool, pillar, or difficulty.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">SJC AI Starter Kit</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="prompts.html">Prompts</a></li>
+      <li><a href="tools.html">Tool Chooser</a></li>
+      <li><a href="aha-archive.html">Aha Archive</a></li>
+      <li><a href="submit.html">Submit</a></li>
+      <li><a href="responsible-use.html">Responsible Use</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+  <div class="container">
+    <div class="page-intro">
+      <h1>AI Recipe Library</h1>
+      <p class="subtitle">Repeatable workflows for common SJC tasks. Start with the recipe, adapt the prompt, and improve it with your team.</p>
+      <div class="callout callout-info" style="margin-top:16px;">
+        <span class="callout-icon">💡</span>
+        <div class="callout-body"><p>These recipes are starting points. Use judgment, check outputs, and share what you learn.</p></div>
+      </div>
+    </div>
+
+    <div class="page-body">
+      <!-- Filters -->
+      <div class="filter-bar" role="search" aria-label="Filter recipes">
+        <div class="filter-group filter-search">
+          <label for="recipe-search">Search</label>
+          <input type="text" id="recipe-search" placeholder="Search by title, team, or tool…" aria-label="Search recipes">
+        </div>
+        <div class="filter-group">
+          <label for="filter-pillar">Pillar</label>
+          <select id="filter-pillar" aria-label="Filter by pillar">
+            <option value="">All pillars</option>
+            <option>Internal Workflows</option>
+            <option>Content Creation</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-team">Team</label>
+          <select id="filter-team" aria-label="Filter by team">
+            <option value="">All teams</option>
+            <option>All</option>
+            <option>Editorial</option>
+            <option>Sales</option>
+            <option>Marketing</option>
+            <option>Social</option>
+            <option>Video</option>
+            <option>Operations</option>
+            <option>Analytics</option>
+            <option>Branded Content</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-tool">Tool</label>
+          <select id="filter-tool" aria-label="Filter by tool">
+            <option value="">All tools</option>
+            <option>Gemini</option>
+            <option>Gemini Gems</option>
+            <option>NotebookLM</option>
+            <option>ChatGPT</option>
+            <option>Claude</option>
+            <option>Perplexity</option>
+            <option>ClickUp Agents</option>
+            <option>Otter</option>
+            <option>DeepL</option>
+            <option>Submagic</option>
+            <option>CapCut</option>
+            <option>Descript</option>
+            <option>Zapier</option>
+            <option>Sprout Social</option>
+            <option>GPTZero</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-difficulty">Difficulty</label>
+          <select id="filter-difficulty" aria-label="Filter by difficulty">
+            <option value="">All levels</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="results-count" id="recipes-count" aria-live="polite"></p>
+      <div id="recipes-container" class="cards-grid" aria-live="polite">
+        <p style="color:var(--text-muted);">Loading recipes…</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p><strong>SJC AI Starter Kit</strong> &mdash; Author: Data &amp; Analytics Team</p>
+    <p>Built to support AI literacy, practical experimentation, and shared learning.</p>
+    <p style="margin-top:8px;">Version 0.1 &mdash; May 2026</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

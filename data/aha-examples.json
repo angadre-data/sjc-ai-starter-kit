@@ -1,0 +1,62 @@
+[
+  {
+    "id": "aha-editorial-audience-angle",
+    "team": "Editorial",
+    "title": "AI surfaced an audience angle we had missed",
+    "whatTried": "Used Gemini to turn a rough story idea into a structured content brief for a Chatelaine feature.",
+    "whatSurprisedMe": "The first draft surfaced a reader question — 'what does this mean for someone already doing this?' — that our team had not explicitly considered. It reframed the angle entirely.",
+    "whatWorked": "Asking the AI to critique the brief from an audience perspective was more useful than asking for a polished first draft. The critique found gaps faster than a team review would have.",
+    "whatFailed": "The first version made unsupported assumptions about search volume and audience intent. It cited a trend as 'growing' without any data.",
+    "nextTime": "Provide existing coverage links, audience data, and search terms before asking for recommendations. The brief gets sharper when the AI has real signal to work from.",
+    "tool": "Gemini",
+    "recipeUsed": "generate-content-briefs"
+  },
+  {
+    "id": "aha-sales-rfp-turnaround",
+    "team": "Sales",
+    "title": "RFP draft cut our turnaround from 3 days to same day",
+    "whatTried": "Used Claude to draft an RFP response for a national advertiser. Pasted the RFP document, our rate card summary, and three past campaign results as context.",
+    "whatSurprisedMe": "The draft was structured, on-brand, and required fewer edits than a first draft from a junior team member. The section on audience reach was nearly publishable.",
+    "whatWorked": "Giving Claude the existing proposal structure as a template before asking it to fill in made the output usable immediately. It matched the advertiser's framing and language.",
+    "whatFailed": "The pricing section invented numbers. It had to be deleted entirely and rebuilt manually.",
+    "nextTime": "Always exclude pricing generation from the AI task. Keep the financial model as a manual step and use AI only for narrative, positioning, and packaging language.",
+    "tool": "Claude",
+    "recipeUsed": "rfp-response-draft"
+  },
+  {
+    "id": "aha-video-captions",
+    "team": "Video",
+    "title": "Submagic captions saved two hours per episode",
+    "whatTried": "Used Submagic to auto-caption a new video series for Instagram Reels instead of manually timing captions in Premiere.",
+    "whatSurprisedMe": "The accuracy was high enough on the first pass that cleanup took under 10 minutes. The word-by-word highlight style performed better than our static-caption control.",
+    "whatWorked": "Exporting the SRT file from Submagic and bringing it into CapCut for final branding kept the workflow flexible. We did not have to stay inside one tool.",
+    "whatFailed": "The first version missed proper nouns and brand names consistently. Product names were mangled.",
+    "nextTime": "Build a custom dictionary in Submagic with brand and product names before the first run. Saves three rounds of correction.",
+    "tool": "Submagic",
+    "recipeUsed": "social-captions-from-video"
+  },
+  {
+    "id": "aha-marketing-subject-lines",
+    "team": "Marketing",
+    "title": "Subject line variants outperformed our control by 18%",
+    "whatTried": "Used ChatGPT to generate 10 newsletter subject line variants for a Today's Parent issue. Ran an A/B test through Sailthru with the two strongest candidates against our usual process.",
+    "whatSurprisedMe": "The winning variant used a specific number we had included in the article body but had not thought to surface in the subject line. Open rate lift was 18% above the control.",
+    "whatWorked": "Asking for 10 variants and then rating them as a team before testing gave us better coverage of angles than generating one or two manually. The volume made the good ideas visible.",
+    "whatFailed": "Two of the ten variants were off-brand — they were too informal for Today's Parent's voice. We would not have caught that without a team review step.",
+    "nextTime": "Include voice and tone examples from recent high-performing sends before asking for variants. Cuts the editing round significantly.",
+    "tool": "ChatGPT",
+    "recipeUsed": "ab-test-headlines-subject-lines"
+  },
+  {
+    "id": "aha-operations-meeting-notes",
+    "team": "Operations",
+    "title": "Meeting notes agent cleared our action item backlog",
+    "whatTried": "Ran Supernormal on three consecutive weekly editorial planning meetings. Used the auto-generated action items and pushed them directly into ClickUp tasks.",
+    "whatSurprisedMe": "The backlog of unresolved action items became visible immediately. Supernormal surfaced three items from prior meetings that had been dropped entirely.",
+    "whatWorked": "The combination of Supernormal for capture and Gemini for summarizing the pattern across all three meetings gave us a useful view of what kept recurring. We used that to fix a planning process gap.",
+    "whatFailed": "Some action items were assigned to the wrong person when two people had overlapping roles in the discussion. Required manual correction.",
+    "nextTime": "Introduce yourself with your name and role at the start of each meeting. Supernormal uses voice to attribute actions, and it performs better when speaker names are clear.",
+    "tool": "Supernormal",
+    "recipeUsed": "meeting-notes-action-items"
+  }
+]

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Library — SJC AI Starter Kit</title>
+  <meta name="description" content="Copy-ready prompts organized by task and team. Replace bracketed fields and iterate.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">SJC AI Starter Kit</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="prompts.html">Prompts</a></li>
+      <li><a href="tools.html">Tool Chooser</a></li>
+      <li><a href="aha-archive.html">Aha Archive</a></li>
+      <li><a href="submit.html">Submit</a></li>
+      <li><a href="responsible-use.html">Responsible Use</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+  <div class="container">
+    <div class="page-intro">
+      <h1>Prompt Library</h1>
+      <p class="subtitle">Copy-ready prompts organized by task and team. Replace the bracketed fields, paste your context, and iterate.</p>
+    </div>
+
+    <div class="page-body">
+      <div class="callout callout-human" style="margin-bottom:24px;">
+        <span class="callout-icon">👤</span>
+        <div class="callout-body">
+          <strong>Before you use any output</strong>
+          <p>AI can help draft, summarize, reformat, and suggest. Confirm facts, sources, tone, rights, privacy, and policy fit before using any AI output.</p>
+        </div>
+      </div>
+
+      <div class="filter-bar" role="search" aria-label="Filter prompts">
+        <div class="filter-group filter-search">
+          <label for="prompt-search">Search</label>
+          <input type="text" id="prompt-search" placeholder="Search prompts…" aria-label="Search prompts">
+        </div>
+        <div class="filter-group">
+          <label for="filter-category">Category</label>
+          <select id="filter-category" aria-label="Filter by category">
+            <option value="">All categories</option>
+            <option>Editorial</option>
+            <option>Audience / SEO</option>
+            <option>Sales / Revenue</option>
+            <option>Marketing / Social</option>
+            <option>Video / Audio</option>
+            <option>Operations</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-prompt-tool">Tool</label>
+          <select id="filter-prompt-tool" aria-label="Filter by tool">
+            <option value="">All tools</option>
+            <option>Gemini</option>
+            <option>ChatGPT</option>
+            <option>Claude</option>
+            <option>Perplexity</option>
+            <option>NotebookLM</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-prompt-diff">Difficulty</label>
+          <select id="filter-prompt-diff" aria-label="Filter by difficulty">
+            <option value="">All levels</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="results-count" id="prompts-count" aria-live="polite"></p>
+      <div id="prompts-container" class="cards-grid" aria-live="polite">
+        <p style="color:var(--text-muted);">Loading prompts…</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p><strong>SJC AI Starter Kit</strong> &mdash; Author: Data &amp; Analytics Team</p>
+    <p>Built to support AI literacy, practical experimentation, and shared learning.</p>
+    <p style="margin-top:8px;">Version 0.1 &mdash; May 2026</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

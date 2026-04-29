@@ -1,0 +1,930 @@
+[
+  {
+    "id": "transcribe-summarize-interview",
+    "title": "Transcribe and summarize an interview",
+    "pillar": "Internal Workflows",
+    "team": [
+      "All",
+      "Editorial"
+    ],
+    "tools": [
+      "Otter",
+      "Gemini",
+      "ChatGPT"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Beginner",
+    "timeSaved": "30–60 minutes",
+    "featured": true,
+    "useWhen": "You have completed a recorded interview and need a clean transcript plus a usable summary before writing.",
+    "inputsNeeded": [
+      "Recorded audio or video file",
+      "Interview subject name and topic",
+      "Story angle or working headline",
+      "Any relevant background notes"
+    ],
+    "steps": [
+      "Upload the audio or video file to Otter. Let it run the full transcription.",
+      "Review the transcript in Otter and correct proper nouns, brand names, and misheard words.",
+      "Copy the corrected transcript into Gemini or ChatGPT.",
+      "Use the prompt below to generate a structured summary.",
+      "Review the summary against the actual transcript before using any quotes.",
+      "Save the summary alongside the original transcript in your project folder."
+    ],
+    "prompt": "Act as an editorial research assistant.\n\nGoal:\nSummarize the interview transcript below into a structured brief that can be used by the journalist writing the story.\n\nContext:\n[PASTE CORRECTED TRANSCRIPT HERE]\n\nAudience:\nThe journalist who conducted the interview. This summary is for internal use only — it is not for publication.\n\nTask:\nProvide:\n1. A 3–5 sentence summary of the main story angle and key insights.\n2. A list of 5–8 direct quotes that are strong enough to consider for the final article (include paragraph/timestamp references if available).\n3. A list of facts, statistics, or specific claims that need independent verification.\n4. Any follow-up questions the journalist should consider asking.\n\nConstraints:\n- Do not invent quotes or paraphrase quotes as if they are direct quotes.\n- Do not add context that is not in the transcript.\n- Flag any moments where the audio quality may have affected accuracy.\n- If a quote is ambiguous, note it clearly.\n\nOutput format:\nStructured sections with headers: Summary, Quotable Moments, Facts to Verify, Follow-up Questions.",
+    "exampleOutput": "Summary: The interview covers three distinct themes — platform dependency, editorial independence, and revenue diversification. The source is cautiously optimistic about the 18-month outlook but flags two specific regulatory risks.\n\nQuotable Moments:\n- 'We built our audience on one platform. That was the mistake.' (8:42)\n- 'Independence costs money. That is the honest answer.' (22:17)\n\nFacts to Verify: '65% of digital revenue from display advertising' — verify with industry reports.\n\nFollow-up Questions: Ask for specifics on the 'third revenue stream' mentioned at 31:00.",
+    "humanCheck": [
+      "Read every quoted section against the original transcript — do not trust the AI summary for quotes.",
+      "Verify all statistics and factual claims independently before including them in the article.",
+      "Do not use the summary as a substitute for listening to the full recording.",
+      "Confirm that no sensitive off-the-record comments appear in the AI output."
+    ],
+    "relatedPrompts": [
+      "transcript-summary",
+      "source-questions"
+    ],
+    "sourceTheme": "AI-assisted editorial workflow"
+  },
+  {
+    "id": "translate-en-fr",
+    "title": "Translate EN/FR content for review",
+    "pillar": "Internal Workflows",
+    "team": [
+      "Editorial",
+      "Chatelaine",
+      "Today's Parent"
+    ],
+    "tools": [
+      "DeepL",
+      "Gemini"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Beginner",
+    "timeSaved": "20–40 minutes",
+    "featured": false,
+    "useWhen": "You need a working translation of editorial or marketing copy for bilingual content, and a native speaker will review the final version.",
+    "inputsNeeded": [
+      "Source text in English or French",
+      "Target brand or publication name",
+      "Any brand-specific terms or proper nouns that should not be translated",
+      "Tone guidance (formal, conversational, brand-specific)"
+    ],
+    "steps": [
+      "Paste the source text into DeepL and generate an initial translation.",
+      "Review the DeepL output for obvious errors, brand name handling, and structural issues.",
+      "If the translation needs tone adjustment or cultural adaptation, paste both the original and the DeepL draft into Gemini and use the prompt below.",
+      "Send the refined draft to a native French speaker for final review.",
+      "Never publish the AI translation without human review."
+    ],
+    "prompt": "Act as a bilingual editorial translator specializing in Canadian French and English media.\n\nGoal:\nRefine the machine translation below so it reads naturally in Canadian French for a media audience, while preserving the meaning, tone, and intent of the original English.\n\nContext:\nOriginal English:\n[PASTE ENGLISH SOURCE HERE]\n\nDeepL first draft:\n[PASTE DEEPL OUTPUT HERE]\n\nAudience:\nReaders of [PUBLICATION NAME]. Tone is [FORMAL / CONVERSATIONAL / BRAND-SPECIFIC DESCRIPTION].\n\nTask:\n1. Identify any phrases in the DeepL draft that feel awkward, overly literal, or culturally misaligned.\n2. Suggest revised phrasing for each flagged section.\n3. Flag any brand terms, proper nouns, or product names that may need editorial review.\n\nConstraints:\n- Do not change the meaning or add new information.\n- Flag any section where cultural context or regional terminology is ambiguous.\n- Do not translate proper names, brand names, or publication titles unless instructed.\n\nOutput format:\nTwo sections: 1) Flagged phrases with suggested alternatives; 2) Full revised translation.",
+    "exampleOutput": "Flagged phrases: 'Getting the most out of your day' → 'Tirer le meilleur parti de votre journée' is too literal. Suggest: 'Profiter pleinement de votre journée.'\n\nFull revised translation: [revised French text]",
+    "humanCheck": [
+      "Always have a native French speaker review the final output before publication.",
+      "Check that product names, legal terms, and brand-specific language are handled correctly.",
+      "Do not rely on AI translation for legal documents, regulated health content, or sensitive topics.",
+      "Confirm the tone matches the publication's established French voice."
+    ],
+    "relatedPrompts": [
+      "en-fr-translation",
+      "fr-en-back-translation",
+      "localization-review"
+    ],
+    "sourceTheme": "Bilingual content production"
+  },
+  {
+    "id": "draft-headlines-decks-copy",
+    "title": "Draft headlines, decks, newsletter copy, and social captions",
+    "pillar": "Internal Workflows",
+    "team": [
+      "Editorial",
+      "Marketing",
+      "Social"
+    ],
+    "tools": [
+      "Gemini",
+      "ChatGPT"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Beginner",
+    "timeSaved": "30–60 minutes",
+    "featured": false,
+    "useWhen": "You have finished or nearly finished a piece of content and need multiple format variations quickly — for web, newsletter, and social.",
+    "inputsNeeded": [
+      "Finished or near-finished article or content piece",
+      "Brand or publication name",
+      "Target platform or channel",
+      "Any character limits or format requirements",
+      "Audience description"
+    ],
+    "steps": [
+      "Paste the article or a detailed summary into your LLM of choice.",
+      "Specify the publication, audience, and all platforms you need copy for.",
+      "Use the prompt below to request all versions in one pass.",
+      "Review each output against the article for accuracy and brand voice.",
+      "Adapt the strongest options rather than using them verbatim.",
+      "Run a final check before scheduling or publishing."
+    ],
+    "prompt": "Act as an editorial content strategist with expertise in multi-platform publishing.\n\nGoal:\nGenerate a complete set of promotional copy variations for the article below, covering web headlines, newsletter, and social media.\n\nContext:\n[PASTE ARTICLE TEXT OR DETAILED SUMMARY HERE]\n\nAudience:\n[DESCRIBE TARGET AUDIENCE — e.g., 'Today's Parent readers: Canadian parents with children aged 0–12, interested in practical parenting advice']\n\nTask:\nProvide the following, each as a clearly labelled section:\n1. Five web headline options (max 70 characters each). Vary the angles: curiosity, direct benefit, question, number-led, and emotional hook.\n2. One article deck / subhead (max 120 characters).\n3. One newsletter blurb (40–60 words, conversational tone, ends with a read-more hook).\n4. Three social captions: one for Instagram (engaging, can be longer), one for Facebook (conversational), one for X/Twitter (punchy, max 240 characters).\n\nConstraints:\n- Do not overstate or add claims not in the article.\n- Match the tone of [PUBLICATION NAME].\n- Do not use clickbait phrasing that misrepresents the content.\n- Flag any version that makes a claim you could not find in the article.\n\nOutput format:\nLabelled sections for each format. Use the exact headers: Headlines, Deck, Newsletter, Social.",
+    "exampleOutput": "Headlines:\n1. How One Parent Found a Back-to-School Routine That Actually Works (68 chars)\n2. 7 Habits That Help Kids Settle Into Fall (41 chars)\n...\n\nDeck: The routines that reduce morning chaos — tested by real families.\n\nNewsletter: Back-to-school chaos? These five small changes helped families across Canada find their rhythm again. Read the full story.\n\nSocial — Instagram: Real talk: the first week back is hard. Here's what actually worked for three Canadian families...",
+    "humanCheck": [
+      "Verify every factual claim in each headline against the article — headlines must not overstate.",
+      "Check brand voice and tone for each platform before scheduling.",
+      "Confirm character counts for each platform's requirements.",
+      "Review social captions for anything that could be misread out of context."
+    ],
+    "relatedPrompts": [
+      "headline-variants",
+      "newsletter-subject-lines",
+      "social-caption-variants",
+      "article-to-social"
+    ],
+    "sourceTheme": "Automated Content Adaptation Tool"
+  },
+  {
+    "id": "generate-content-briefs",
+    "title": "Generate content briefs from topic ideas",
+    "pillar": "Internal Workflows",
+    "team": [
+      "Editorial",
+      "Branded Content"
+    ],
+    "tools": [
+      "Gemini",
+      "ClickUp Agents",
+      "ChatGPT"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Beginner",
+    "timeSaved": "45–90 minutes",
+    "featured": true,
+    "useWhen": "You have a topic idea or editorial direction and need to develop it into a structured brief that a writer, freelancer, or contractor can execute.",
+    "inputsNeeded": [
+      "Topic idea or working headline",
+      "Target publication and audience",
+      "Any existing coverage or SEO research",
+      "Desired word count and format",
+      "Deadline and assigned writer (if known)"
+    ],
+    "steps": [
+      "Write a short description of the topic idea — two to four sentences is enough.",
+      "If you have existing coverage or search data, copy it in as context.",
+      "Use the prompt below to generate a full brief.",
+      "Review the brief and adjust angle, scope, and sources before sending to the writer.",
+      "If using ClickUp Agents in pilot: attach the brief to the ClickUp task and trigger the agent to populate task fields automatically.",
+      "File the approved brief in the project folder alongside the task."
+    ],
+    "prompt": "Act as an editorial strategist and content planner.\n\nGoal:\nTurn the topic idea below into a structured editorial content brief that a writer can use to produce a complete article.\n\nContext:\nTopic idea: [DESCRIBE THE STORY IDEA IN 2–4 SENTENCES]\nPublication: [PUBLICATION NAME]\nTarget audience: [AUDIENCE DESCRIPTION]\nExisting coverage or search context: [PASTE ANY RESEARCH, COMPETITOR COVERAGE, OR SEARCH TERMS HERE — or write 'None available']\n\nAudience:\nThe writer assigned to this story. This brief should give them everything they need to start without requiring follow-up questions.\n\nTask:\nProvide a brief that includes:\n1. Working headline (one strong option)\n2. Story angle in one sentence\n3. Why this matters to the audience now (2–3 sentences)\n4. Recommended structure (3–5 sections with one-line descriptions)\n5. Suggested sources and types of expertise to include\n6. Key questions the article should answer\n7. Words to avoid or sensitivities to flag\n8. Suggested word count and format\n\nConstraints:\n- Do not fabricate sources, statistics, or expert names.\n- If no search data is provided, note what research the writer should conduct before starting.\n- Flag any assumptions about audience interest that should be verified.\n\nOutput format:\nLabelled sections. Keep the full brief to one page equivalent (350–450 words).",
+    "exampleOutput": "Working headline: Why Canada's Housing Market Is Hitting Young Families Differently This Year\n\nStory angle: The gap between first-time buyer expectations and current market conditions has widened in a way that disproportionately affects families with children under five.\n\nWhy now: Three consecutive quarters of stalled listings in major markets have created a specific pressure on growing families who cannot downsize while waiting...",
+    "humanCheck": [
+      "Verify the 'Why now' rationale — AI may cite trends that are not current or accurate.",
+      "Confirm suggested sources are real, relevant, and available before including them in the brief.",
+      "Adjust the brief to match house style and editorial voice before sending to the writer.",
+      "Do not use AI to generate the final assignment — a human editor must approve the brief."
+    ],
+    "relatedPrompts": [
+      "content-brief-generator",
+      "story-idea-expander",
+      "source-questions"
+    ],
+    "sourceTheme": "AI-assisted editorial workflow"
+  },
+  {
+    "id": "research-ideation-assistant",
+    "title": "Research and ideation assistant",
+    "pillar": "Internal Workflows",
+    "team": [
+      "All"
+    ],
+    "tools": [
+      "Gemini",
+      "ChatGPT",
+      "Perplexity",
+      "NotebookLM"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Beginner",
+    "timeSaved": "1–2 hours",
+    "featured": false,
+    "useWhen": "You are starting a new story, campaign, or project and need to quickly develop a landscape view — what exists, what angles are covered, and where gaps or opportunities are.",
+    "inputsNeeded": [
+      "Topic area or working title",
+      "Any existing documents, reports, or links you have",
+      "Audience you are writing or planning for",
+      "What you already know and what you need to find out"
+    ],
+    "steps": [
+      "Use Perplexity to do an initial research sweep — search for recent coverage, data, and expert commentary. Note the sources it cites.",
+      "Upload key documents (reports, competitor articles, backgrounders) into NotebookLM. Ask it what themes, gaps, and questions emerge.",
+      "Take the Perplexity findings and NotebookLM insights into Gemini or ChatGPT and use the prompt below to synthesize and generate ideas.",
+      "Review the output for gaps, errors, and assumptions before using it to plan your work.",
+      "Save the research summary in your project folder."
+    ],
+    "prompt": "Act as a research analyst and editorial strategist.\n\nGoal:\nSynthesize the research below into a clear landscape summary and generate specific, usable ideas for coverage or campaigns.\n\nContext:\nTopic area: [DESCRIBE THE TOPIC OR QUESTION]\nWhat I already know: [SUMMARIZE WHAT YOU KNOW — 2–4 sentences]\nResearch gathered so far:\n[PASTE PERPLEXITY RESULTS, NOTEBOOKLM NOTES, OR OTHER RESEARCH HERE]\n\nAudience:\n[WHO WILL BENEFIT FROM THIS RESEARCH — e.g., 'Editorial team planning Q3 content calendar']\n\nTask:\n1. Summarize the current landscape in 3–5 key observations.\n2. Identify 3 angles that are underrepresented in existing coverage.\n3. Generate 5 specific story or campaign ideas that build on the gaps.\n4. Flag any data points or claims in the research that look unreliable or need verification.\n5. Suggest 3 experts or source types that would add credibility to any of these ideas.\n\nConstraints:\n- Do not invent sources, statistics, or expert names.\n- Base all observations on the research provided.\n- Flag any assumptions you are making.\n\nOutput format:\nFive numbered sections: Landscape, Coverage Gaps, Story Ideas, Fact Checks Needed, Source Suggestions.",
+    "exampleOutput": "Landscape: Four key themes dominate current coverage — sustainability, cost, policy, and consumer behaviour. The most recent data is from 2023; there is a noticeable absence of Canadian-specific analysis.\n\nCoverage Gaps: 1. Impact on rural families vs. urban families. 2. Long-term behavioural shift vs. short-term reaction...",
+    "humanCheck": [
+      "Verify every factual claim and source reference independently — AI research summaries can contain errors.",
+      "Use Perplexity's source citations to go back to original articles and documents.",
+      "Do not treat the AI ideation output as an editorial plan — bring ideas to the team for prioritization.",
+      "Check that any data cited in the summary is current and from reliable sources."
+    ],
+    "relatedPrompts": [
+      "story-idea-expander",
+      "content-gap-analysis",
+      "advertiser-research",
+      "source-questions"
+    ],
+    "sourceTheme": "AI-assisted research and ideation"
+  },
+  {
+    "id": "analytics-weekly-recommendations",
+    "title": "Analyze weekly analytics and recommend actions",
+    "pillar": "Internal Workflows",
+    "team": [
+      "Editorial",
+      "Analytics"
+    ],
+    "tools": [
+      "Gemini Gems",
+      "GA4",
+      "Looker Studio",
+      "Statera"
+    ],
+    "status": "Pilot",
+    "difficulty": "Intermediate",
+    "timeSaved": "1–2 hours",
+    "featured": true,
+    "useWhen": "You have weekly analytics data from GA4 or Statera and want to move beyond reading numbers to generating specific editorial and content recommendations.",
+    "inputsNeeded": [
+      "Weekly GA4 or Looker Studio data export or screenshot",
+      "Prior week comparison data",
+      "Top 10 performing URLs",
+      "Any notable events that week (campaigns, newsletters, social pushes)",
+      "Team's content priorities for the coming week"
+    ],
+    "steps": [
+      "Export the weekly analytics summary from Looker Studio or GA4 — a CSV or screenshot works.",
+      "Pull the top 10 articles by sessions, top referral sources, and any significant traffic drops or spikes.",
+      "Open Gemini or your configured Gemini Gem and paste the data with the prompt below.",
+      "Review the recommendations against your editorial calendar.",
+      "Share the summary with the editorial team in your weekly planning meeting.",
+      "Flag any data anomalies for the Analytics team before acting on them."
+    ],
+    "prompt": "Act as a data-informed editorial analyst.\n\nGoal:\nReview the weekly analytics data below and produce a clear, actionable summary that an editorial team can use in a planning meeting.\n\nContext:\nWeek of: [DATE RANGE]\nData source: [GA4 / Looker Studio / Statera]\nTop 10 articles by sessions this week:\n[PASTE DATA]\nKey traffic sources:\n[PASTE DATA]\nNotable events this week: [DESCRIBE ANY CAMPAIGNS, SOCIAL PUSHES, NEWSLETTERS, OR EXTERNAL EVENTS]\nPrior week comparison: [PASTE OR DESCRIBE CHANGE %]\n\nAudience:\nEditorial and content team leads. They need clear recommendations, not a data recitation.\n\nTask:\n1. Summarize overall performance in 2–3 sentences (up, down, flat — and why, if visible in the data).\n2. Identify the top 3 content opportunities for next week based on what performed this week.\n3. Identify 1–2 pieces that underperformed and suggest a reason (with a caveat that you are working from limited data).\n4. Flag any anomalies worth investigating.\n5. Suggest one specific next action for each opportunity.\n\nConstraints:\n- Do not invent explanations for trends that are not visible in the data.\n- Use 'may indicate' and 'appears to' language — do not present correlations as causes.\n- Do not make claims about audience intent without data to support it.\n\nOutput format:\nFive clearly labelled sections. Keep the total to one page.",
+    "exampleOutput": "Performance summary: Traffic was up 12% week-over-week, driven largely by a single Chatelaine article that was picked up in the Globe and Mail's daily briefing. Organic search remained flat.\n\nTop opportunities: 1. The 'budget meal planning' article had a 4.2-minute average session — consider a follow-up or an email series. 2. ...",
+    "humanCheck": [
+      "Verify data figures against the source dashboard before sharing — copy-paste errors are common.",
+      "Do not use AI traffic analysis as the basis for cutting a content category without human review.",
+      "Check that event descriptions are accurate — AI summaries often misattribute traffic spikes.",
+      "Review recommendations with the editorial team before implementing changes."
+    ],
+    "relatedPrompts": [
+      "weekly-analytics",
+      "content-performance",
+      "audience-insights"
+    ],
+    "sourceTheme": "Analytics-assisted editorial"
+  },
+  {
+    "id": "prioritize-editorial-queue",
+    "title": "Prioritize editorial queue",
+    "pillar": "Internal Workflows",
+    "team": [
+      "Editorial",
+      "Today's Parent"
+    ],
+    "tools": [
+      "ClickUp Agents"
+    ],
+    "status": "Pilot",
+    "difficulty": "Intermediate",
+    "timeSaved": "30–60 minutes",
+    "featured": false,
+    "useWhen": "You have a backlog of editorial tasks in ClickUp and need help surfacing what to tackle first based on deadlines, dependencies, and content priorities.",
+    "inputsNeeded": [
+      "Access to your ClickUp editorial workspace",
+      "Current content calendar and key publication dates",
+      "Any editorial priorities set by leadership for the current period"
+    ],
+    "steps": [
+      "Ensure your ClickUp tasks have due dates, assignees, and priority tags filled in.",
+      "Open the ClickUp Agents panel (pilot access required).",
+      "Ask the Agent to review the current editorial list and flag tasks that are past due, near deadline, or missing key fields.",
+      "Review the Agent's output and confirm or adjust the prioritization.",
+      "Share the prioritized list in your next editorial stand-up.",
+      "Note: This is in pilot — report any unexpected Agent behavior to Operations."
+    ],
+    "prompt": "Act as an editorial production coordinator.\n\nGoal:\nReview the editorial task list below and produce a prioritized action plan for the next 5 working days.\n\nContext:\nTask list snapshot:\n[PASTE CLICKUP TASK LIST EXPORT OR SUMMARY HERE]\nCurrent date: [TODAY'S DATE]\nKey publication dates: [LIST UPCOMING ISSUE OR CONTENT DEADLINES]\nEditorial priorities this period: [DESCRIBE ANY CAMPAIGN, SEASON, OR STRATEGIC PRIORITIES]\n\nAudience:\nThe managing editor and editorial team.\n\nTask:\n1. Flag any tasks that are overdue or at risk of missing their deadline.\n2. Group tasks by urgency: This week, Next week, Can wait.\n3. Identify any tasks that are blocked by missing information or approvals.\n4. Suggest 1–2 tasks that could be moved or deprioritized without impact.\n\nConstraints:\n- Only use information present in the task list — do not invent deadlines or priorities.\n- Flag any tasks where the due date or priority appears to be missing.\n\nOutput format:\nThree sections: Urgent / At Risk, Scheduled, Blocked or Deprioritized.",
+    "exampleOutput": "Urgent / At Risk: 'Back to School roundup' is due Friday with no assignee and draft not started. 'Newsletter header copy' is 2 days overdue.\n\nScheduled: 6 tasks are on track for next week. No blockers visible.\n\nBlocked: 'Partner content review' is waiting on client approval — flagged for follow-up.",
+    "humanCheck": [
+      "The AI cannot see internal communications, verbal agreements, or calendar context — review with the team.",
+      "Confirm due dates are accurate in ClickUp before acting on any 'overdue' flag.",
+      "Do not use agent prioritization to override editorial judgment on story importance.",
+      "Report pilot issues to Operations — the Agents feature is still being evaluated."
+    ],
+    "relatedPrompts": [
+      "clickup-task",
+      "project-status",
+      "meeting-to-action"
+    ],
+    "sourceTheme": "Workflow automation"
+  },
+  {
+    "id": "generate-sales-pitch",
+    "title": "Generate sales pitch materials",
+    "pillar": "Internal Workflows",
+    "team": [
+      "Sales",
+      "Branded Content"
+    ],
+    "tools": [
+      "Gemini",
+      "ChatGPT",
+      "Claude"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Beginner",
+    "timeSaved": "1–2 hours",
+    "featured": false,
+    "useWhen": "You are preparing for a sales meeting or need to build a pitch deck or one-pager for an advertiser and want a strong first draft quickly.",
+    "inputsNeeded": [
+      "Advertiser name and industry",
+      "Campaign goal or RFP brief (if available)",
+      "SJC brands and audience that are relevant",
+      "Any past campaign results you can reference",
+      "Desired tone: formal proposal vs. exploratory pitch"
+    ],
+    "steps": [
+      "Gather the advertiser background — website, recent campaigns, and any brief they have shared.",
+      "Collect SJC audience data and past campaign results relevant to this advertiser's category.",
+      "Use Perplexity to do a quick research sweep on the advertiser's business priorities and pain points.",
+      "Paste the context into Claude or ChatGPT with the prompt below.",
+      "Review the draft for accuracy — especially any audience claims or performance statistics.",
+      "Send to your sales director for review before presenting to the client."
+    ],
+    "prompt": "Act as a senior sales strategist with deep experience in media advertising and branded content.\n\nGoal:\nDraft a compelling pitch narrative for the advertiser below, tailored to their business goals and aligned with SJC Media's audience and brand offerings.\n\nContext:\nAdvertiser: [COMPANY NAME]\nIndustry: [INDUSTRY]\nKnown business priorities or goals: [PASTE RESEARCH OR BRIEF]\nSJC brands we are proposing: [LIST BRANDS]\nRelevant audience data: [PASTE AUDIENCE DESCRIPTION OR DEMO DATA]\nPast campaign results (if available): [PASTE RESULTS OR WRITE 'Not available']\n\nAudience:\nThe advertiser's marketing or media planning team. They are evaluating us against competing media brands.\n\nTask:\nDraft a pitch narrative (400–600 words) that includes:\n1. An opening that frames the business opportunity we are helping them solve.\n2. Why our audience is the right one for this advertiser.\n3. A proposed partnership concept (3–4 sentences — specific enough to be credible).\n4. A brief performance reference or proof point.\n5. A clear call to action.\n\nConstraints:\n- Do not fabricate audience statistics or campaign results.\n- Do not overcommit to deliverables that have not been confirmed.\n- Flag any claim that needs to be verified with internal data before sending.\n\nOutput format:\nContinuous narrative with a clear opening, body, and closing CTA. Then a separate section: 'Claims to verify before sending.'",
+    "exampleOutput": "Opening: For [Advertiser], reaching Canadian women making household decisions is not a nice-to-have — it is the campaign. SJC Media's portfolio reaches 8 million Canadians each month, with Chatelaine and Today's Parent at the centre of that conversation.\n\nAudience fit: Our readers are...",
+    "humanCheck": [
+      "Verify all audience statistics against current Statera or internal media kit data before sending.",
+      "Remove any claims about competitor weaknesses — this can create legal exposure.",
+      "Confirm all proposed deliverables with your team before including them in the pitch.",
+      "Have a sales director or VP review before sending to a national client."
+    ],
+    "relatedPrompts": [
+      "sales-deck-narrative",
+      "advertiser-research",
+      "campaign-idea",
+      "client-pitch"
+    ],
+    "sourceTheme": "AI-assisted sales and revenue"
+  },
+  {
+    "id": "rfp-response-draft",
+    "title": "Generate RFP/RFI response draft",
+    "pillar": "Internal Workflows",
+    "team": [
+      "Sales"
+    ],
+    "tools": [
+      "ChatGPT",
+      "Claude"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Intermediate",
+    "timeSaved": "2–4 hours",
+    "featured": false,
+    "useWhen": "You have received an RFP or RFI from an advertiser or agency and need to produce a structured, on-brand response draft quickly.",
+    "inputsNeeded": [
+      "Full RFP document (paste key sections)",
+      "SJC brands and audience to include",
+      "Any previous proposals or templates to align with",
+      "Rate card or pricing framework (for reference — do not paste exact rates into AI)"
+    ],
+    "steps": [
+      "Read the full RFP and identify the four or five key evaluation criteria the client is using.",
+      "Gather your supporting materials: audience data, case studies, team bios if requested.",
+      "Paste the RFP sections and supporting materials into Claude or ChatGPT.",
+      "Use the prompt below to generate a structured first draft.",
+      "Review carefully: remove any invented statistics and rebuild the pricing section manually.",
+      "Have your sales director or GM review the draft before final submission."
+    ],
+    "prompt": "Act as a senior proposal writer with expertise in media and branded content partnerships.\n\nGoal:\nDraft a structured, professional RFP response that positions SJC Media as the strongest choice for this partnership.\n\nContext:\nRFP summary / key sections:\n[PASTE RFP TEXT OR SUMMARIZE KEY ASKS]\nEvaluation criteria stated in the RFP: [LIST CRITERIA IF STATED]\nSJC brands we are proposing: [LIST BRANDS]\nAudience and reach data: [PASTE RELEVANT DATA]\nPast campaign references: [DESCRIBE 1–2 RELEVANT PAST CAMPAIGNS]\n\nAudience:\nThe client's procurement, marketing, or agency team evaluating competing proposals.\n\nTask:\nDraft a response that includes:\n1. Executive summary (150 words max) — why SJC is the right partner.\n2. Company and brand overview — 1 paragraph per brand included.\n3. Audience alignment section — 2–3 paragraphs explaining fit.\n4. Partnership concept — our proposed approach to their campaign goal.\n5. Why us vs. alternatives — 3 differentiators (do not name competitors).\n6. [Pricing note: write 'PRICING SECTION — TO BE COMPLETED MANUALLY' as a placeholder.]\n7. Next steps and contact.\n\nConstraints:\n- Do not invent statistics, audience figures, or case study results.\n- Mark any section where you have made assumptions clearly with [VERIFY].\n- Keep tone formal, confident, and concise — not salesy.\n\nOutput format:\nNumbered sections matching the structure above. Flag each [VERIFY] item in a summary list at the end.",
+    "exampleOutput": "Executive Summary: SJC Media is Canada's leading independent media company, with a portfolio that reaches over 8 million Canadians each month across editorial, digital, and event channels. For a brand seeking to reach [TARGET AUDIENCE], our combination of editorial credibility and audience depth makes us the strongest partner in this category.\n\n[PRICING SECTION — TO BE COMPLETED MANUALLY]",
+    "humanCheck": [
+      "Delete and rebuild the pricing section manually — never let AI guess at rates.",
+      "Verify all audience figures against current media kit data before submission.",
+      "Check that the proposal meets all requirements stated in the RFP — the AI may miss specific asks.",
+      "Have a sales director review the response before submission."
+    ],
+    "relatedPrompts": [
+      "rfp-response",
+      "sales-deck-narrative",
+      "client-pitch"
+    ],
+    "sourceTheme": "AI-assisted sales and revenue"
+  },
+  {
+    "id": "recruitment-jd-drafting",
+    "title": "Recruitment support: JD drafting and candidate review",
+    "pillar": "Internal Workflows",
+    "team": [
+      "Operations",
+      "HR"
+    ],
+    "tools": [
+      "ChatGPT"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Beginner",
+    "timeSaved": "1–2 hours",
+    "featured": false,
+    "useWhen": "You are opening a new role or backfilling a position and need a strong job description or a structured candidate review framework.",
+    "inputsNeeded": [
+      "Role title and team",
+      "Key responsibilities (even as rough notes)",
+      "Must-have vs. nice-to-have skills",
+      "Any existing JD templates to align with",
+      "For candidate review: anonymized resume or applicant summary"
+    ],
+    "steps": [
+      "Write a rough list of what the role needs to do — bullet points are fine.",
+      "Note the team this person will join and who they report to.",
+      "Use the prompt below to generate a first draft JD.",
+      "Review the draft with the hiring manager and HR before posting.",
+      "For candidate review: use the second prompt option to create a structured evaluation framework — do not use AI to make final hiring decisions."
+    ],
+    "prompt": "Act as an experienced HR professional and talent acquisition specialist.\n\nGoal:\nDraft a clear, inclusive, and compelling job description for the role below that will attract strong candidates and accurately represent the position.\n\nContext:\nRole title: [JOB TITLE]\nTeam: [TEAM NAME]\nReports to: [MANAGER TITLE]\nKey responsibilities: [PASTE ROUGH RESPONSIBILITY NOTES]\nMust-have qualifications: [LIST]\nNice-to-have qualifications: [LIST]\nCompany context: SJC Media is Canada's leading independent media company with brands including Chatelaine, Today's Parent, Canadian Business, and others.\n\nAudience:\nJob seekers at the mid-career to senior level. The posting will appear on LinkedIn and our careers page.\n\nTask:\n1. Write a role overview (3–4 sentences).\n2. List responsibilities in concise bullet points (6–8 bullets).\n3. List qualifications in two groups: required and preferred.\n4. Add a brief 'What we offer' section (3–4 bullets) — note: compensation details will be added manually.\n5. Include a short inclusive hiring statement.\n\nConstraints:\n- Do not invent specific benefits, salaries, or team structures.\n- Avoid gendered language or terms that may discourage candidates from underrepresented groups.\n- Mark any section you are uncertain about with [REVIEW WITH HR].\n\nOutput format:\nFormatted job posting with clear sections. Ready to edit and post.",
+    "exampleOutput": "Digital Editor, Chatelaine\n\nAbout the role: We are looking for a skilled Digital Editor to join the Chatelaine team and help us publish high-quality content across our digital platforms. You will work closely with writers, the editorial director, and the audience team to...",
+    "humanCheck": [
+      "Have HR review for compliance with employment standards and inclusive language requirements.",
+      "Remove or verify any specific benefit claims before posting.",
+      "Do not use AI to rank, score, or make final decisions on candidates.",
+      "For candidate review frameworks: use them as a discussion tool, not a decision engine."
+    ],
+    "relatedPrompts": [
+      "jd-draft",
+      "candidate-review",
+      "onboarding-guide"
+    ],
+    "sourceTheme": "AI-assisted operations"
+  },
+  {
+    "id": "meeting-notes-action-items",
+    "title": "Create meeting notes and action items",
+    "pillar": "Internal Workflows",
+    "team": [
+      "All"
+    ],
+    "tools": [
+      "Supernormal",
+      "Granola AI",
+      "Gemini"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Beginner",
+    "timeSaved": "20–30 minutes",
+    "featured": false,
+    "useWhen": "You have finished a meeting and need structured notes, clear action items, and a summary you can share with attendees.",
+    "inputsNeeded": [
+      "Meeting recording (for Supernormal) or manual notes (for Gemini)",
+      "List of attendees",
+      "Meeting agenda or context",
+      "Any decisions or commitments made during the meeting"
+    ],
+    "steps": [
+      "For recorded meetings: run Supernormal or Granola AI during or after the meeting. Both will auto-generate notes and action items.",
+      "For meetings from manual notes: paste your rough notes into Gemini with the prompt below.",
+      "Review all action items — check that assignments are correct and due dates are realistic.",
+      "Edit before distributing — add any context that was implicit in the conversation.",
+      "Share via email or ClickUp, not directly from the AI output."
+    ],
+    "prompt": "Act as a professional meeting coordinator.\n\nGoal:\nTurn the meeting notes below into a clean, shareable summary with clear action items.\n\nContext:\nMeeting: [MEETING NAME OR TOPIC]\nDate: [DATE]\nAttendees: [LIST NAMES AND ROLES]\nAgenda: [PASTE AGENDA OR DESCRIBE MEETING PURPOSE]\nRough notes:\n[PASTE YOUR ROUGH NOTES OR TRANSCRIPT SUMMARY HERE]\n\nAudience:\nMeeting attendees and any stakeholders who need to be informed.\n\nTask:\n1. Write a 3–5 sentence meeting summary.\n2. List all decisions made during the meeting.\n3. List all action items with: task, owner, and due date.\n4. List any open questions that were raised but not resolved.\n\nConstraints:\n- Only include information from the notes provided.\n- If an action item's owner or due date is unclear, flag it with [NEEDS CLARIFICATION].\n- Do not add context or decisions that are not in the notes.\n\nOutput format:\nFour sections: Summary, Decisions, Action Items, Open Questions.",
+    "exampleOutput": "Summary: The editorial team reviewed the Q3 content calendar and confirmed priorities for the back-to-school period. Two new freelance assignments were approved and the newsletter schedule was adjusted to accommodate the product launch.\n\nAction Items:\n- [NAME]: Confirm freelancer brief by Wednesday. Due: [DATE].\n- [NAME]: Update editorial calendar in ClickUp. Due: [DATE].",
+    "humanCheck": [
+      "Verify action items are assigned to the correct people — attribution errors are common.",
+      "Add any implicit agreements or context that was not in your notes.",
+      "Do not distribute AI meeting notes without reviewing — errors in action items have real consequences.",
+      "Confirm due dates with assignees before sending the summary."
+    ],
+    "relatedPrompts": [
+      "meeting-to-action",
+      "clickup-task",
+      "project-status"
+    ],
+    "sourceTheme": "Meeting and workflow automation"
+  },
+  {
+    "id": "repurpose-article-multi-channel",
+    "title": "Repurpose article into multi-channel package",
+    "pillar": "Content Creation",
+    "team": [
+      "Editorial",
+      "Marketing",
+      "Social"
+    ],
+    "tools": [
+      "ChatGPT",
+      "Gemini"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Beginner",
+    "timeSaved": "30–60 minutes",
+    "featured": true,
+    "useWhen": "You have a strong published article and want to extend its reach across newsletter, social, and other formats without rebuilding from scratch.",
+    "inputsNeeded": [
+      "Published article text or link",
+      "Publication name and brand voice notes",
+      "Target platforms for repurposing",
+      "Any campaign or audience context",
+      "Character limits for each platform"
+    ],
+    "steps": [
+      "Paste the full article text into your LLM of choice.",
+      "Specify all platforms you need copy for in a single prompt — this is more efficient than one request per platform.",
+      "Use the prompt below to generate a complete multi-channel package.",
+      "Review each output for accuracy, tone, and brand voice.",
+      "Adapt the outputs — do not publish AI copy verbatim.",
+      "Archive strong examples in your team's prompt library for reuse."
+    ],
+    "prompt": "Act as a multi-platform content strategist with editorial and audience development expertise.\n\nGoal:\nTurn the article below into a complete multi-channel package that extends its reach and life.\n\nContext:\n[PASTE FULL ARTICLE TEXT HERE]\n\nPublication: [PUBLICATION NAME]\nBrand voice: [DESCRIBE TONE — e.g., 'warm, practical, no-nonsense. Chatelaine voice: smart Canadian woman talking to her peer.']\n\nAudience:\n[DESCRIBE TARGET READER]\n\nTask:\nGenerate the following, each as a clearly labelled section:\n1. Email newsletter blurb (50–70 words, conversational, ends with a clear link hook)\n2. Three headline variations for web (max 70 characters each — vary the angle)\n3. Instagram caption (100–150 words, engaging, uses 1–2 questions, ends with a read-more line)\n4. Facebook caption (60–100 words, conversational, asks for engagement)\n5. X/Twitter post (max 240 characters, punchy, includes a hook)\n6. One pull quote suitable for a graphic card (max 25 words, must be a direct quote from the article)\n7. A 3-bullet 'key takeaways' box for web use\n\nConstraints:\n- Only use facts and quotes from the article provided.\n- Do not add new claims or invented statistics.\n- Match brand voice for each format.\n- Flag any output that contains a claim you cannot find in the article text.\n\nOutput format:\nLabelled sections as listed above. Include a one-line 'Review note' at the end of any section where you made a judgment call.",
+    "exampleOutput": "Newsletter blurb: Moving your kids to a new school mid-year is one of the hardest parenting calls you can make. This week, we asked the experts — and three families who did it — what actually helped. Read the full story.\n\nHeadlines:\n1. When Moving Schools Mid-Year Is the Right Call (48 chars)\n2. What 3 Families Learned About Switching Schools (49 chars)\n3. The Expert Advice on School Transitions No One Tells You (57 chars)",
+    "humanCheck": [
+      "Verify pull quotes are exact — do not publish paraphrased quotes as direct quotes.",
+      "Check all social captions for accuracy and appropriate brand voice before scheduling.",
+      "Confirm the newsletter blurb does not overstate or sensationalize the article's findings.",
+      "Review Instagram and Facebook captions for anything that could be misread out of context."
+    ],
+    "relatedPrompts": [
+      "article-to-social",
+      "headline-variants",
+      "newsletter-subject-lines",
+      "social-caption-variants"
+    ],
+    "sourceTheme": "Automated Content Adaptation Tool"
+  },
+  {
+    "id": "seo-metadata-generation",
+    "title": "SEO title, meta description, and alt text generation",
+    "pillar": "Content Creation",
+    "team": [
+      "Editorial",
+      "SEO"
+    ],
+    "tools": [
+      "Gemini",
+      "Perplexity"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Beginner",
+    "timeSaved": "10–20 minutes",
+    "featured": true,
+    "useWhen": "You are publishing an article and need optimized metadata and image alt text before it goes live.",
+    "inputsNeeded": [
+      "Article headline and full text (or summary)",
+      "Target keyword or search intent",
+      "Publication name",
+      "Any images that need alt text"
+    ],
+    "steps": [
+      "If you do not have a target keyword, use Perplexity to research what people are searching for on this topic.",
+      "Paste the article text and the keyword into Gemini.",
+      "Use the prompt below to generate SEO title, meta description, and alt text options.",
+      "Review and edit each output — do not use AI-generated metadata verbatim without review.",
+      "Check title length (max 60 characters) and meta description length (max 160 characters) before publishing."
+    ],
+    "prompt": "Act as an SEO specialist with editorial sensibility.\n\nGoal:\nGenerate optimized SEO metadata and image alt text for the article below, balancing search relevance with editorial quality.\n\nContext:\nArticle headline: [HEADLINE]\nArticle summary or full text: [PASTE TEXT OR SUMMARY]\nTarget keyword or search intent: [KEYWORD OR DESCRIBE WHAT USERS SEARCH TO FIND THIS]\nPublication: [PUBLICATION NAME]\n\nAudience:\nSearch users looking for [DESCRIBE TOPIC]. They are at the [awareness / consideration / decision] stage.\n\nTask:\n1. Three SEO title options (max 60 characters each — include the target keyword naturally).\n2. Two meta description options (max 160 characters each — include the keyword, make it a compelling summary).\n3. Three image alt text options for the main article image (describe what the image shows if provided; if not, write placeholder format).\n4. One OG/social sharing title (max 90 characters — can be slightly more engaging than the SEO title).\n\nConstraints:\n- Do not keyword stuff — titles and descriptions must read naturally.\n- Do not make claims in metadata that are not in the article.\n- Flag any title that is borderline clickbait.\n\nOutput format:\nFour labelled sections. Include character count for each title and description.",
+    "exampleOutput": "SEO Titles:\n1. 'Back to School Meal Prep Ideas for Busy Parents' — 49 chars\n2. 'Easy Back to School Lunches Kids Will Actually Eat' — 50 chars\n3. 'Quick School Lunch Ideas: Back to School Prep Guide' — 51 chars\n\nMeta Descriptions:\n1. 'Skip the morning stress. These 10 school lunch ideas take under 15 minutes and work for picky eaters. Tested by Canadian parents.' — 131 chars",
+    "humanCheck": [
+      "Check character counts — AI often miscounts. Use a character counter before publishing.",
+      "Verify that the keyword appears naturally — do not force it if it reads awkwardly.",
+      "Confirm the meta description accurately describes the article — never overstate.",
+      "Review alt text to ensure it describes the image accurately, not just the article topic."
+    ],
+    "relatedPrompts": [
+      "metadata-generator",
+      "seo-refresh",
+      "evergreen-refresh"
+    ],
+    "sourceTheme": "SEO and audience development"
+  },
+  {
+    "id": "video-podcast-script",
+    "title": "Generate video or podcast script from article",
+    "pillar": "Content Creation",
+    "team": [
+      "Video",
+      "Editorial"
+    ],
+    "tools": [
+      "Gemini",
+      "ChatGPT"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Intermediate",
+    "timeSaved": "1–2 hours",
+    "featured": false,
+    "useWhen": "You have a strong article and want to adapt it into a video script or podcast episode without starting from scratch.",
+    "inputsNeeded": [
+      "Full article text",
+      "Target video or podcast format and length",
+      "Host or presenter name and voice style",
+      "Any brand or show guidelines"
+    ],
+    "steps": [
+      "Paste the full article into your LLM of choice.",
+      "Specify the format (YouTube long-form, short-form Reel, podcast intro, full episode), target length, and host style.",
+      "Use the prompt below to generate a draft script.",
+      "Review the script for factual accuracy against the original article.",
+      "Read it aloud — AI scripts often have unnatural rhythms that only show up when spoken.",
+      "Have the host or presenter review and rewrite in their own voice before recording."
+    ],
+    "prompt": "Act as a broadcast and podcast scriptwriter with experience in editorial media.\n\nGoal:\nAdapt the article below into a [VIDEO SCRIPT / PODCAST SCRIPT] that is engaging, conversational, and true to the source material.\n\nContext:\n[PASTE FULL ARTICLE TEXT HERE]\n\nFormat: [YOUTUBE VIDEO / PODCAST EPISODE / SHORT-FORM REEL / OTHER]\nTarget length: [DESCRIBE — e.g., '5–7 minutes', '90 seconds']\nHost/presenter voice: [DESCRIBE STYLE — e.g., 'warm, conversational, slightly witty, does not read from notes']\nShow or brand: [NAME AND ANY RELEVANT GUIDELINES]\n\nAudience:\n[DESCRIBE WHO WILL WATCH OR LISTEN]\n\nTask:\n1. Write a complete script in the format specified.\n2. Include a hook (first 10–15 seconds that earns the viewer's attention).\n3. Break the content into clear segments with natural transitions.\n4. Write in the spoken voice — short sentences, contractions, no jargon.\n5. End with a clear call to action (subscribe, read more, comment, etc.).\n\nConstraints:\n- Do not add information not in the article.\n- Do not invent statistics, quotes, or expert names.\n- Flag any section that is based on the article but may need the host's own experience or anecdote added.\n\nOutput format:\nFull script with time markers. Mark host cues in [BRACKETS]. Flag any [NEEDS HOST INPUT] sections.",
+    "exampleOutput": "HOOK (0:00–0:15)\n[Host looks directly at camera]\nHost: 'What if the thing that is actually hurting your kid at school is not the teacher or the workload — it is the lunch box?' Today we are breaking down why school nutrition is more complicated than it looks — and what actually works.'\n\nSEGMENT 1 (0:15–1:30): Why this matters\n[Host can move to second camera angle or stay static]\n...",
+    "humanCheck": [
+      "Read the full script aloud before recording — fix anything that sounds unnatural.",
+      "Verify all facts and statistics against the original article before the host records.",
+      "Have the host review and rewrite any section that does not sound like their voice.",
+      "Do not record without a human editorial review — scripts go directly to audiences."
+    ],
+    "relatedPrompts": [
+      "article-to-video",
+      "podcast-outline",
+      "voiceover-script",
+      "clip-hook"
+    ],
+    "sourceTheme": "Content Creation"
+  },
+  {
+    "id": "social-captions-from-video",
+    "title": "Create social captions and clips from video",
+    "pillar": "Content Creation",
+    "team": [
+      "Video",
+      "Social"
+    ],
+    "tools": [
+      "Submagic",
+      "CapCut",
+      "Descript"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Beginner",
+    "timeSaved": "30–60 minutes",
+    "featured": false,
+    "useWhen": "You have a finished video and need to produce captioned social clips for Instagram Reels, TikTok, YouTube Shorts, or Facebook.",
+    "inputsNeeded": [
+      "Finished video file (MP4 or similar)",
+      "Target platforms and aspect ratios",
+      "Brand color palette and font settings",
+      "Any specific clips or moments to highlight"
+    ],
+    "steps": [
+      "Upload the video to Submagic for auto-captioning.",
+      "Review captions: correct proper nouns, brand names, and timing errors.",
+      "Export clips from Submagic or bring the SRT into CapCut for branded styling.",
+      "Use Descript for longer-form editing or to remove filler words before clipping.",
+      "Add brand overlays, call-to-action text, and cover images in CapCut or Canva.",
+      "Review the final clip on a mobile device before publishing."
+    ],
+    "prompt": "Act as a social video producer and content strategist.\n\nGoal:\nIdentify the strongest clip moments from the video transcript below and write caption copy for each clip for social media.\n\nContext:\nVideo transcript or summary:\n[PASTE TRANSCRIPT OR DESCRIBE VIDEO CONTENT AND KEY MOMENTS]\nVideo total length: [LENGTH]\nBrand/publication: [NAME]\n\nAudience:\n[DESCRIBE TARGET SOCIAL AUDIENCE]\n\nTask:\n1. Identify 3–5 moments from the transcript that would make strong standalone social clips (each 30–90 seconds).\n2. For each clip, provide: timestamp range, reason it works as a standalone, and a caption for Instagram Reels.\n3. Write a short hook text overlay (max 8 words) for the opening frame of each clip.\n4. Suggest a cover image moment (describe what should be on screen).\n\nConstraints:\n- Only identify moments that are present in the transcript.\n- Do not suggest clips that require out-of-context understanding to work.\n- Flag any clip that contains a claim that should be verified before posting.\n\nOutput format:\nNumbered clip recommendations with: Timestamp, Reason, Caption, Hook Text, Cover Moment.",
+    "exampleOutput": "Clip 1: Timestamp 2:15–3:40\nReason: The host delivers a surprising statistic and follows it with a practical tip — strong standalone arc.\nCaption: 'You probably thought you knew this about school lunches. You were almost right. 🎓 Full video link in bio.'\nHook text: 'The school lunch myth nobody talks about'\nCover moment: Host mid-sentence looking directly at camera, slight smile.",
+    "humanCheck": [
+      "Watch each proposed clip in context — AI does not fully understand visual pacing.",
+      "Verify any statistics or claims in clip captions against the original source.",
+      "Review all hook text for clickbait — it should intrigue, not mislead.",
+      "Check that clips do not remove important qualifiers that change meaning."
+    ],
+    "relatedPrompts": [
+      "clip-hook",
+      "caption-cleanup",
+      "article-to-social"
+    ],
+    "sourceTheme": "Video and social content"
+  },
+  {
+    "id": "newsletter-assembly-support",
+    "title": "Newsletter assembly support",
+    "pillar": "Content Creation",
+    "team": [
+      "Editorial",
+      "Marketing"
+    ],
+    "tools": [
+      "Gemini",
+      "Sailthru"
+    ],
+    "status": "Pilot",
+    "difficulty": "Intermediate",
+    "timeSaved": "1–2 hours",
+    "featured": false,
+    "useWhen": "You are preparing a newsletter issue and need help writing section intros, blurbs, subject line options, and preview text before loading into Sailthru.",
+    "inputsNeeded": [
+      "List of articles or content pieces going into the issue",
+      "Newsletter name and audience",
+      "Tone and format guidelines",
+      "Any sponsor or partner content to flag",
+      "Subject line performance data from past issues (if available)"
+    ],
+    "steps": [
+      "List all content going into the issue with a one-line description of each piece.",
+      "Use the prompt below to generate blurbs, intro copy, and subject line options.",
+      "Review each blurb for accuracy against the source article.",
+      "Flag sponsored sections clearly — do not let AI blur editorial and sponsor labels.",
+      "Load reviewed copy into Sailthru. Test on mobile before scheduling.",
+      "Choose subject line through team review or A/B test in Sailthru."
+    ],
+    "prompt": "Act as an email newsletter editor with audience development expertise.\n\nGoal:\nWrite copy for the newsletter issue below: section blurbs, an intro, subject line options, and preview text.\n\nContext:\nNewsletter: [NEWSLETTER NAME]\nAudience: [SUBSCRIBER DESCRIPTION]\nIssue date: [DATE]\nContent lineup:\n[LIST EACH ARTICLE WITH A 1-SENTENCE DESCRIPTION]\nSponsor content (if any): [DESCRIBE OR NOTE 'None']\nTone: [DESCRIBE — e.g., 'warm, smart, helpful, not clickbait-y']\nTop subject lines that have worked before: [PASTE EXAMPLES OR WRITE 'Not available']\n\nAudience:\nSubscribers of [NEWSLETTER NAME] who open because they trust the editorial selection.\n\nTask:\n1. Newsletter intro (50–80 words, editor's voice, frames the theme of this issue).\n2. Blurb for each content piece (30–50 words each, conversational, ends with a hook).\n3. Five subject line options (vary: number-led, question, direct, curiosity, emotional hook — max 50 characters each).\n4. One preview text option (max 90 characters — complements the subject line, does not repeat it).\n\nConstraints:\n- Do not make factual claims not in the article descriptions provided.\n- Label sponsored sections clearly — do not blend them into editorial blurbs.\n- Do not use clickbait subject lines that mislead about content.\n\nOutput format:\nLabelled sections. Subject lines as a numbered list.",
+    "exampleOutput": "Intro: It is officially the part of summer where everything feels a little slower and a little more possible. This week we have five stories worth your slow morning — from the meal prep shortcut that actually works to the money conversation every couple should have before fall.\n\nBlurb 1: You have heard every lunch hack. This one is different. Three parents tested it for a month, and it stuck. Here is what they learned.",
+    "humanCheck": [
+      "Verify every blurb against the source article before loading into Sailthru.",
+      "Confirm sponsor labels are correct and placement meets policy requirements.",
+      "Test subject line rendering on mobile — many clients cut off after 35–40 characters.",
+      "Have an editor read the full issue copy before it is scheduled."
+    ],
+    "relatedPrompts": [
+      "newsletter-subject-lines",
+      "article-to-social",
+      "headline-variants"
+    ],
+    "sourceTheme": "Newsletter and email content"
+  },
+  {
+    "id": "ab-test-headlines-subject-lines",
+    "title": "A/B test headline and subject line variants",
+    "pillar": "Content Creation",
+    "team": [
+      "Editorial",
+      "Marketing"
+    ],
+    "tools": [
+      "ChatGPT",
+      "Gemini"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Beginner",
+    "timeSaved": "15–30 minutes",
+    "featured": false,
+    "useWhen": "You want to test two or more headline or subject line angles before publishing or sending, rather than relying on gut instinct.",
+    "inputsNeeded": [
+      "Article summary or newsletter content description",
+      "Publication and audience",
+      "Any past subject line performance data",
+      "Character limits for each platform"
+    ],
+    "steps": [
+      "Describe the content piece and its key angles in 3–5 sentences.",
+      "Use the prompt below to generate 10 variants across different angles.",
+      "As a team, select the two strongest options for the A/B test.",
+      "Set up the A/B test in your publishing platform or email tool.",
+      "After the test, document the winning approach in your team's learnings log.",
+      "Use the result to inform the next round of generation."
+    ],
+    "prompt": "Act as a digital editor and headline strategist with experience in A/B testing for online media.\n\nGoal:\nGenerate 10 headline or subject line variants for the content below, covering distinct angles for A/B testing.\n\nContext:\nContent description: [DESCRIBE THE ARTICLE OR NEWSLETTER IN 3–5 SENTENCES]\nPublication/newsletter: [NAME]\nAudience: [DESCRIBE]\nTop-performing past examples (if available): [PASTE 2–3 EXAMPLES OR WRITE 'Not available']\nCharacter limit: [MAX CHARACTERS — e.g., 60 for SEO, 50 for email]\n\nAudience:\nThe editorial team who will select 2 options for the A/B test.\n\nTask:\nGenerate exactly 10 variants covering these 10 angles (one each):\n1. Direct and informational\n2. Number or list-led\n3. Question\n4. Curiosity gap (without being misleading)\n5. Emotional hook\n6. Benefit-led\n7. Urgency or timeliness\n8. Personal / second-person ('you')\n9. Surprising or counterintuitive\n10. Authority or credibility\n\nConstraints:\n- Each variant must be under the character limit.\n- No variant should overstate or misrepresent the content.\n- Flag any variant that feels borderline clickbait.\n- Do not use variants that are nearly identical to each other.\n\nOutput format:\nNumbered list. Include the angle name and character count beside each variant.",
+    "exampleOutput": "1. Direct: 'School Lunch Prep Tips for September' — 39 chars\n2. Number-led: '10 School Lunches Kids Will Actually Eat' — 40 chars\n3. Question: 'Are You Making Lunch Too Complicated?' — 37 chars\n4. Curiosity gap: 'The School Lunch Habit Most Parents Skip' — 40 chars [Review: ensure article answers this clearly]\n5. Emotional: 'The Lunch Box That Finally Ended the Morning Fight' — 50 chars",
+    "humanCheck": [
+      "Confirm each variant is within the specified character limit using a character counter.",
+      "Review the 'curiosity gap' and 'counterintuitive' variants carefully — these are most at risk of misleading.",
+      "Select variants for the test as a team, not by individual preference.",
+      "Document what wins and why — the learning is as valuable as the result."
+    ],
+    "relatedPrompts": [
+      "headline-variants",
+      "newsletter-subject-lines",
+      "social-ab-test"
+    ],
+    "sourceTheme": "Audience development and testing"
+  },
+  {
+    "id": "brand-voice-style-review",
+    "title": "Style guide assistant and brand voice review",
+    "pillar": "Content Creation",
+    "team": [
+      "Editorial",
+      "Branded Content"
+    ],
+    "tools": [
+      "Gemini Gems",
+      "Claude"
+    ],
+    "status": "Pilot",
+    "difficulty": "Intermediate",
+    "timeSaved": "20–40 minutes",
+    "featured": true,
+    "useWhen": "You have a draft that needs to be reviewed against a publication's style guide or brand voice, especially when onboarding a freelancer or reviewing branded content.",
+    "inputsNeeded": [
+      "Draft text to review",
+      "Publication or brand style guide (or key excerpts)",
+      "Tone description for the publication",
+      "Any specific flagged issues from past reviews"
+    ],
+    "steps": [
+      "If using a Gemini Gem: ensure the Gem has been set up with your publication's style guide and voice principles. Contact the Analytics team for setup support.",
+      "If using Claude: paste the key style guide sections along with the draft.",
+      "Use the prompt below to generate a structured review.",
+      "Review the AI feedback critically — it will not catch everything a trained editor would.",
+      "Return edits to the writer with context, not just corrections.",
+      "Do not use AI brand voice review as a substitute for editorial judgment on story quality."
+    ],
+    "prompt": "Act as a senior copy editor and brand voice specialist.\n\nGoal:\nReview the draft below against the style guide and brand voice guidelines provided, and return structured, actionable feedback.\n\nContext:\nDraft to review:\n[PASTE DRAFT TEXT HERE]\n\nStyle guide excerpt and voice principles:\n[PASTE RELEVANT STYLE GUIDE SECTIONS OR KEY VOICE NOTES]\n\nPublication: [PUBLICATION NAME]\nWriter context: [STAFF WRITER / FREELANCER / BRANDED CONTENT — note if this is a first submission]\n\nAudience:\nThe writer who will receive this feedback and revise the draft.\n\nTask:\n1. Flag any terms, phrases, or constructions that conflict with the style guide.\n2. Identify 3–5 passages where the voice feels off-brand, and suggest specific alternatives.\n3. Note any structural or clarity issues that are not strictly style-guide violations but weaken the piece.\n4. Identify 2–3 things that are working well — do not only flag problems.\n5. Provide a one-sentence overall assessment.\n\nConstraints:\n- Do not rewrite the entire draft — provide targeted feedback.\n- Do not evaluate the story's editorial merit or factual accuracy — that is out of scope for this review.\n- Distinguish between style-guide violations (rules) and voice suggestions (guidance).\n\nOutput format:\nFive labelled sections: Style Issues, Voice Feedback, Clarity Notes, What's Working, Overall Assessment.",
+    "exampleOutput": "Style Issues: 'COVID-19' should be capitalized per house style (found 2 instances). 'Over' used to mean 'more than' — house style prefers 'more than.'\n\nVoice Feedback: The opening paragraph is too formal for Chatelaine's voice. Consider: [suggested alternative opening].\n\nWhat's Working: The lede is strong — it earns attention without overpromising.",
+    "humanCheck": [
+      "An AI style review is a first pass, not a replacement for editor judgment.",
+      "Do not send AI-generated feedback directly to freelancers — rewrite it in your own editorial voice.",
+      "Fact-checking and story-level editorial decisions are always human responsibilities.",
+      "Update the Gem or prompt if the AI consistently misses a specific style rule."
+    ],
+    "relatedPrompts": [
+      "brand-voice-rewrite",
+      "lede-critique",
+      "article-takeaways"
+    ],
+    "sourceTheme": "AI-assisted editorial quality"
+  },
+  {
+    "id": "email-inbox-triage",
+    "title": "Email and inbox triage for editorial opportunities",
+    "pillar": "Internal Workflows",
+    "team": [
+      "Editorial",
+      "Sales"
+    ],
+    "tools": [
+      "Gemini",
+      "ChatGPT"
+    ],
+    "status": "Exploring",
+    "difficulty": "Intermediate",
+    "timeSaved": "30–60 minutes",
+    "featured": false,
+    "useWhen": "Your inbox contains a backlog of pitches, PR releases, partner inquiries, or reader tips and you need to quickly triage what is worth pursuing.",
+    "inputsNeeded": [
+      "Batch of emails or PR pitches (copy and paste the text)",
+      "Current editorial priorities or content calendar focus",
+      "Your publication's policy on PR pitches and unsolicited content"
+    ],
+    "steps": [
+      "Copy the text of 10–20 emails or pitches into a document.",
+      "Note your current editorial priorities so the AI can filter against them.",
+      "Use the prompt below to generate a triage summary.",
+      "Review the triage — do not decline real opportunities based solely on the AI's assessment.",
+      "Use the output as a starting point for your own review, not as the final decision.",
+      "Note: Full inbox automation is in Exploring phase — this recipe is for batch manual triage only."
+    ],
+    "prompt": "Act as an editorial assistant helping a busy editor manage incoming pitches and opportunities.\n\nGoal:\nTriage the emails or pitches below and flag the ones most worth pursuing given our current editorial priorities.\n\nContext:\nIncoming emails/pitches:\n[PASTE EMAILS OR PITCH TEXT — remove any sensitive personal information before pasting]\nCurrent editorial priorities: [DESCRIBE — e.g., 'Back to school content for September issue, mental health in focus, looking for Canadian expert sources']\nPublication: [NAME]\n\nAudience:\nThe editor reviewing these pitches.\n\nTask:\n1. For each pitch: assign a priority (High / Medium / Low / Decline) with a one-sentence reason.\n2. Identify any pitches that are strong enough to pursue immediately.\n3. Flag any that are from sources we have worked with before (if mentioned in the pitch).\n4. Suggest a one-sentence response draft for any you would decline.\n\nConstraints:\n- Do not make final editorial decisions — this is triage, not assignment.\n- Do not fabricate pitch details or add context not in the emails.\n- Flag any pitch that involves a privacy, sensitivity, or conflict of interest consideration.\n\nOutput format:\nNumbered list with: Pitch summary, Priority, Reason, Action.",
+    "exampleOutput": "1. Pitch: 'Expert psychologist available to comment on back-to-school anxiety' — Priority: High — Reason: Strong fit with September mental health focus and expert has Canadian credentials. Action: Reply to confirm availability and expertise.\n\n2. Pitch: 'Wine brand partnership opportunity' — Priority: Decline — Reason: Does not fit current editorial calendar. Suggested response: 'Thank you for reaching out. We are not pursuing this topic for the coming issues, but we will keep you in mind.'",
+    "humanCheck": [
+      "Never decline a pitch based solely on AI triage — review High and Medium items yourself.",
+      "Do not paste full email threads with personal information into public AI tools — use only the pitch text.",
+      "Verify source credentials before agreeing to any expert interview.",
+      "Editorial decisions on pitches are always made by a human editor."
+    ],
+    "relatedPrompts": [
+      "inbox-triage",
+      "source-questions",
+      "content-gap-analysis"
+    ],
+    "sourceTheme": "Workflow efficiency"
+  },
+  {
+    "id": "image-alt-text-accessibility",
+    "title": "Generate image alt descriptions for accessibility",
+    "pillar": "Content Creation",
+    "team": [
+      "Editorial",
+      "Product"
+    ],
+    "tools": [
+      "Gemini Gems"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Beginner",
+    "timeSaved": "10–20 minutes",
+    "featured": false,
+    "useWhen": "You are publishing or updating a batch of articles and need accurate, useful image alt text for accessibility compliance.",
+    "inputsNeeded": [
+      "Images to describe (upload to Gemini)",
+      "Article headline or context for each image",
+      "Any existing alt text to review or improve"
+    ],
+    "steps": [
+      "Open Gemini (with vision capability enabled).",
+      "Upload each image and paste the article headline or topic as context.",
+      "Use the prompt below to generate alt text options.",
+      "Review each description for accuracy — AI can misidentify people, scenes, or objects.",
+      "Check that alt text is descriptive and meaningful, not just keyword-stuffed.",
+      "Add reviewed alt text to the CMS before publishing."
+    ],
+    "prompt": "Act as an accessibility specialist and editorial image describer.\n\nGoal:\nWrite clear, accurate, and useful alt text for the image above, following accessibility best practices.\n\nContext:\nArticle headline or topic: [DESCRIBE THE ARTICLE CONTEXT]\nImage context (if known): [DESCRIBE WHAT THE IMAGE IS — e.g., 'A photo of a family at a picnic table in a backyard']\n\nAudience:\nScreen reader users who cannot see the image. The alt text should convey the meaning and purpose of the image in the article context.\n\nTask:\n1. Write three alt text options at different levels of detail: short (under 50 characters), standard (50–100 characters), and detailed (up to 125 characters).\n2. Note if the image is decorative only (in which case alt text should be empty — alt='').\n3. Flag any element in the image that you cannot describe with certainty.\n\nConstraints:\n- Do not start with 'Image of' or 'Photo of' — screen readers already announce it as an image.\n- Do not include keywords or marketing language.\n- Do not describe decorative images with text — mark them as decorative.\n- If the image shows a real person, only use their name if you are certain who they are.\n\nOutput format:\nThree labelled alt text options and one flag note if applicable.",
+    "exampleOutput": "Short: 'Two children eating lunch at a school cafeteria' — 48 chars\nStandard: 'Two elementary school children eating lunch together at a cafeteria table, both smiling' — 87 chars\nDetailed: 'Two young children, one holding a sandwich and one opening a lunchbox, seated at a wood cafeteria table during school lunch' — 121 chars\nFlag: Could not confirm background details — appears to be a school setting but verify with the photographer.",
+    "humanCheck": [
+      "Review each description for accuracy — especially for images with people, specific locations, or products.",
+      "Do not publish AI-generated alt text without review — errors affect accessibility for real users.",
+      "Confirm that images of identifiable people are described correctly.",
+      "Check that decorative images are correctly marked with empty alt text."
+    ],
+    "relatedPrompts": [
+      "metadata-generator",
+      "seo-refresh"
+    ],
+    "sourceTheme": "Editorial accessibility"
+  }
+]
