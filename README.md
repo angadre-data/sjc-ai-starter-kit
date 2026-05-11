@@ -1,7 +1,7 @@
 # SJC AI Starter Kit
 
 A lightweight internal static website supporting SJC Media's AI literacy program.
-Built for the May 6, 2026 AI Show & Tell and designed for ongoing use as the team's shared AI playbook.
+Built for the May 13, 2026 AI Show & Tell and designed for ongoing use as the team's shared AI playbook.
 
 ## What's inside
 

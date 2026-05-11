@@ -104,7 +104,7 @@ async function renderRecipes(featuredOnly = false, limit = null) {
         <div class="recipe-card-summary">
           <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
             ${statusTag(r.status)}${diffTag(r.difficulty)}
-            ${r.featured ? '<span class="featured-badge">★ May 6</span>' : ''}
+            ${r.featured ? '<span class="featured-badge">★ May 13</span>' : ''}
           </div>
           <div class="card-title">${r.title}</div>
           <div class="card-meta" style="margin-top:6px;">
