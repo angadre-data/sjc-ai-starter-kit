@@ -3,6 +3,7 @@
     "name": "Gemini",
     "category": "LLM",
     "status": "Using",
+    "tryFirst": true,
     "bestFor": [
       "Google Workspace workflows",
       "Research summaries",
@@ -20,7 +21,7 @@
       "Do not use as a final proofreader.",
       "Outputs can miss nuance in sensitive topics."
     ],
-    "where": "Available via Google Workspace — Gemini side panel in Docs, Gmail, and Slides",
+    "where": "Available to all SJC staff via Google Workspace — open Gemini from the side panel in Docs, Gmail, or Slides. No additional access needed.",
     "teams": [
       "All"
     ]
@@ -97,6 +98,7 @@
       "Avoid pasting confidential client data."
     ],
     "where": "chatgpt.com — use the organizational account where available",
+    "accessNote": "Requires leader approval — request access from your manager.",
     "teams": [
       "All"
     ]
@@ -121,6 +123,7 @@
       "Outputs should be reviewed before sharing externally."
     ],
     "where": "claude.ai",
+    "accessNote": "Requires leader approval — request access from your manager.",
     "teams": [
       "Sales",
       "Operations",

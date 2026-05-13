@@ -112,6 +112,7 @@ async function renderRecipes(featuredOnly = false, limit = null) {
             ${r.team.map(t => `<span class="tag tag-gray">${t}</span>`).join('')}
           </div>
           <div class="card-body" style="margin-top:8px;">${r.useWhen}</div>
+          ${r.partnerNote ? `<div class="callout callout-info" style="margin:12px 0;font-size:14px;"><span>💡</span><div>${r.partnerNote}</div></div>` : ''}
           <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
             <span class="time-saved">⏱ ${r.timeSaved}</span>
             ${r.tools.map(t => `<span class="tag tag-blue">${t}</span>`).join('')}
@@ -129,6 +130,7 @@ async function renderRecipes(featuredOnly = false, limit = null) {
           ${r.exampleOutput ? `<h4>Example output</h4><p style="font-size:13.5px;color:var(--text-muted);font-style:italic;">${r.exampleOutput}</p>` : ''}
           <h4>Human check</h4>
           <div class="callout callout-human"><span class="callout-icon">👤</span><div class="callout-body"><ul class="recipe-checks">${r.humanCheck.map(c => `<li>${c}</li>`).join('')}</ul></div></div>
+          ${r.partnerNote ? `<div class="callout callout-info" style="margin:12px 0;font-size:14px;"><span>💡</span><div>${r.partnerNote}</div></div>` : ''}
         </div>
       </article>`).join('');
   }
@@ -247,7 +249,10 @@ async function renderTools() {
     el.innerHTML = list.map(t => `
       <article class="card tool-card" aria-label="${t.name}">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
-          <div class="tool-name">${t.name}</div>
+          <div>
+            <div class="tool-name">${t.name}${t.tryFirst ? ' <span class="tag" style="background:#e6f4ea;color:#1e6b3a;font-size:11px;vertical-align:middle;">✅ Start here</span>' : ''}</div>
+            ${t.accessNote ? `<p class="tool-access-note" style="font-size:13px;color:var(--text-muted);margin-top:4px;">🔒 ${t.accessNote}</p>` : ''}
+          </div>
           <div style="display:flex;gap:6px;flex-wrap:wrap;">
             ${statusTag(t.status)}<span class="tag tag-gray">${t.category}</span>
           </div>

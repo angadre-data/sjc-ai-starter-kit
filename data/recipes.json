@@ -181,6 +181,7 @@
       "Adjust the brief to match house style and editorial voice before sending to the writer.",
       "Do not use AI to generate the final assignment — a human editor must approve the brief."
     ],
+    "partnerNote": "This workflow is already built and in active use at Today's Parent. Before building your own version, speak to Amy Gibson (Digital Product Director) or submit a request via the <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSf0Qaaih-39f-9UEGaJxjnL_w0t-NzpBnbg8s4vlzipnkKzrA/viewform\" target=\"_blank\">Dev/Product Intake Form ↗</a>.",
     "relatedPrompts": [
       "content-brief-generator",
       "story-idea-expander",
