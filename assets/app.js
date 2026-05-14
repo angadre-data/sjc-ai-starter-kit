@@ -297,13 +297,17 @@ async function renderAhas() {
   if (!data) { errMsg(el, 'Could not load aha examples.'); return; }
   el.innerHTML = data.map(a => `
     <article class="card aha-card" aria-label="${a.title}">
-      <div class="aha-team-badge">${a.team}</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+        <div class="aha-team-badge">${a.team}</div>
+        ${a.tool ? `<span class="tag tag-blue">${a.tool}</span>` : ''}
+      </div>
+      ${a.person ? `<div style="font-size:13px;color:var(--text-muted);margin-bottom:6px;">Shared by ${a.person}</div>` : ''}
       <div class="card-title">${a.title}</div>
-      <div class="aha-section"><h4>What I tried</h4><p>${a.whatTried}</p></div>
-      <div class="aha-section"><h4>What surprised me</h4><p>${a.whatSurprisedMe}</p></div>
-      <div class="aha-section"><h4>What worked</h4><p>${a.whatWorked}</p></div>
-      <div class="aha-section"><h4>What failed</h4><p>${a.whatFailed}</p></div>
-      <div class="aha-section"><h4>Next time</h4><p>${a.nextTime}</p></div>
+      ${a.whatTried ? `<div class="aha-section"><h4>What I tried</h4><p>${a.whatTried}</p></div>` : ''}
+      ${a.whatSurprisedMe ? `<div class="aha-section"><h4>What surprised me</h4><p>${a.whatSurprisedMe}</p></div>` : ''}
+      ${a.whatWorked ? `<div class="aha-section"><h4>What worked</h4><p>${a.whatWorked}</p></div>` : ''}
+      ${a.whatFailed ? `<div class="aha-section"><h4>What failed</h4><p>${a.whatFailed}</p></div>` : ''}
+      ${a.nextTime ? `<div class="aha-section"><h4>Next time</h4><p>${a.nextTime}</p></div>` : ''}
     </article>`).join('');
 }
 
