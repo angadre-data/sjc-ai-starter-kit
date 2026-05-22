@@ -394,6 +394,7 @@
     "timeSaved": "2–4 hours",
     "featured": false,
     "useWhen": "You have received an RFP or RFI from an advertiser or agency and need to produce a structured, on-brand response draft quickly.",
+    "partnerNote": "Before using this recipe, check in with Cameron Williamson (VP, Client Solutions) — the Applied AI team has an ongoing project called Agent Joe (in Claude and ChatGPT) specifically built for RFP/RFI response drafting. It may already do what you need.",
     "inputsNeeded": [
       "Full RFP document (paste key sections)",
       "SJC brands and audience to include",
@@ -406,7 +407,7 @@
       "Paste the RFP sections and supporting materials into Claude or ChatGPT.",
       "Use the prompt below to generate a structured first draft.",
       "Review carefully: remove any invented statistics and rebuild the pricing section manually.",
-      "Have your sales director or GM review the draft before final submission."
+      "Have your sales leader or VP review the draft before final submission."
     ],
     "prompt": "Act as a senior proposal writer with expertise in media and branded content partnerships.\n\nGoal:\nDraft a structured, professional RFP response that positions SJC Media as the strongest choice for this partnership.\n\nContext:\nRFP summary / key sections:\n[PASTE RFP TEXT OR SUMMARIZE KEY ASKS]\nEvaluation criteria stated in the RFP: [LIST CRITERIA IF STATED]\nSJC brands we are proposing: [LIST BRANDS]\nAudience and reach data: [PASTE RELEVANT DATA]\nPast campaign references: [DESCRIBE 1–2 RELEVANT PAST CAMPAIGNS]\n\nAudience:\nThe client's procurement, marketing, or agency team evaluating competing proposals.\n\nTask:\nDraft a response that includes:\n1. Executive summary (150 words max) — why SJC is the right partner.\n2. Company and brand overview — 1 paragraph per brand included.\n3. Audience alignment section — 2–3 paragraphs explaining fit.\n4. Partnership concept — our proposed approach to their campaign goal.\n5. Why us vs. alternatives — 3 differentiators (do not name competitors).\n6. [Pricing note: write 'PRICING SECTION — TO BE COMPLETED MANUALLY' as a placeholder.]\n7. Next steps and contact.\n\nConstraints:\n- Do not invent statistics, audience figures, or case study results.\n- Mark any section where you have made assumptions clearly with [VERIFY].\n- Keep tone formal, confident, and concise — not salesy.\n\nOutput format:\nNumbered sections matching the structure above. Flag each [VERIFY] item in a summary list at the end.",
     "exampleOutput": "Executive Summary: SJC Media is Canada's leading independent media company, with a portfolio that reaches over 8 million Canadians each month across editorial, digital, and event channels. For a brand seeking to reach [TARGET AUDIENCE], our combination of editorial credibility and audience depth makes us the strongest partner in this category.\n\n[PRICING SECTION — TO BE COMPLETED MANUALLY]",
@@ -414,7 +415,7 @@
       "Delete and rebuild the pricing section manually — never let AI guess at rates.",
       "Verify all audience figures against current media kit data before submission.",
       "Check that the proposal meets all requirements stated in the RFP — the AI may miss specific asks.",
-      "Have a sales director review the response before submission."
+      "Have your sales leader or VP review the response before submission."
     ],
     "relatedPrompts": [
       "rfp-response",
