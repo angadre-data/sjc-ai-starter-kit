@@ -410,7 +410,10 @@ function escAttr(str) {
 }
 
 /* ─── INIT ────────────────────────────────────────────────────────── */
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
 document.addEventListener('DOMContentLoaded', () => {
+  if (!location.hash) window.scrollTo(0, 0);
   initNav();
   const page = location.pathname.split('/').pop() || 'index.html';
   if (page === 'index.html' || page === '') {

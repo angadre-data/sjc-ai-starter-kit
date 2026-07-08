@@ -168,6 +168,18 @@
     "tool": ""
   },
   {
+    "id": "aha-vanessa-clickup-study-bank",
+    "team": "Editorial",
+    "person": "Vanessa Grant",
+    "title": "ClickUp Super Agent builds a searchable study bank from PR pitches — surfaced automatically at story time",
+    "whatTried": "Used a ClickUp Super Agent to create a list for tracking studies received from PR reps or found online. The agent logs the source, contact, a summary, key stats, caveats, and best-use notes. A second ClickUp agent reviews the list when outlining article updates, so relevant statistics get surfaced automatically.",
+    "whatSurprisedMe": "I receive a lot of press releases and studies that seem like they could be helpful one day, but I was never sure what to do with them to remember they existed. This keeps them all in one place and allows my agents to unearth them as needed.",
+    "whatWorked": "You can direct the agent to check your email for the source material, or copy and paste it directly into the chat. The agent extracts structure from whatever you give it — press releases, PDFs, links — and files them in a consistent format with methodology details, key stats, caveats, and suggested editorial use.",
+    "whatFailed": "",
+    "nextTime": "Make sure the agent can extract data from the file format you're sharing. Flag any conflicts of interest and double-check that the main stats are accurate — though this can also happen later in the fact-checking stage.",
+    "tool": "ClickUp"
+  },
+  {
     "id": "aha-angad-ai-persona-qa",
     "team": "Data & Analytics",
     "person": "Angad Gadre",

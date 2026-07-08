@@ -887,6 +887,49 @@
     "sourceTheme": "Workflow efficiency"
   },
   {
+    "id": "clickup-pr-study-bank",
+    "title": "Build a searchable PR research and study bank in ClickUp",
+    "pillar": "Internal Workflows",
+    "team": [
+      "Editorial"
+    ],
+    "tools": [
+      "ClickUp"
+    ],
+    "status": "Ready to use",
+    "difficulty": "Intermediate",
+    "timeSaved": "1+ hours per story cycle",
+    "featured": false,
+    "useWhen": "You regularly receive PR pitches, studies, and research reports and want to store them in a structured, searchable bank so they can be surfaced automatically when relevant stories come up — instead of disappearing into your inbox.",
+    "inputsNeeded": [
+      "Access to ClickUp with Super Agent enabled",
+      "Study, survey, press release, report, or brand-commissioned research to log",
+      "Source link, press release PDF, or email content from the PR sender",
+      "PR contact details if provided"
+    ],
+    "steps": [
+      "Open ClickUp and ask your Super Agent to create a new list for storing PR research and studies. Ask it to set up custom fields: Source link, PR contact, Core summary, Methodology, Key stats, Caveats, Best use, Topic, and Use angle.",
+      "When you receive a study or press release, share it with the agent — either direct it to check your email for the item, or copy and paste the content directly into the chat.",
+      "Use the prompt below to instruct the agent to create a structured entry in the bank. The agent will extract the source details, summarize the methodology, pull key stats, flag caveats, and suggest editorial use.",
+      "Review the entry for accuracy — especially check key statistics, sample sizes, and conflict-of-interest flags. Correct anything the agent misread or missed.",
+      "To surface research when writing or updating a story, ask your second ClickUp agent to check the study bank for relevant entries. It will surface matching stats, sources, and caveats automatically."
+    ],
+    "prompt": "You are an editorial research assistant building and maintaining a PR / Study Stats Bank for future story development.\n\nYour job is to take a study, survey, report, press release, or brand-commissioned research item that I share and turn it into a clean, reusable reference entry in my stats bank.\n\nFor each item:\n\nRead the source carefully\nUse the main report, study page, press release, or linked article.\nIf available, check for methodology details, sample size, geography, dates, and who conducted or commissioned it.\n\nDecide whether it belongs in the bank\nSave items that could be useful later for editorial planning, drafting, background research, or pitch evaluation.\nThese can include academic studies, public reports, surveys, PR-funded research, and brand-sponsored reports.\nDo not treat all sources as equally credible. Preserve caveats clearly.\n\nCreate a structured entry using this format:\n\nSource\n- Main report/study link\n- Press release or summary link, if relevant\n- PR contact, if provided\n- Relevant spokesperson, if provided\n\nCore summary\n2–4 sentences explaining what the report says and what the most editorially useful takeaway is.\n\nMethodology\n- Sample size\n- Geography\n- Audience surveyed or studied\n- Field dates\n- Survey/research partner\n- Margin of error / credibility interval, if available\nIf methodology is missing or vague, say so clearly.\n\nKey stats\nPull out the most useful numbers in bullet form. Prioritize stats that could support future stories.\n\nCaveats\nClearly note sponsorship, PR bias, weak methodology, narrow sample, missing details, or anything else that limits trustworthiness. If it's brand-commissioned, say that plainly. If it's U.S.-only or otherwise not representative, note that too.\n\nBest use\nSuggest the kinds of stories this could support in the future. Example categories: mental load, sleep, baby gear, family money, co-parenting, school stress, teen mental health, etc.\n\nPitch context\nBriefly note how this came in, if relevant (PR pitch, email, social trend, press release, etc.).\n\nUse editorial judgment, not PR language\nRewrite everything in neutral editorial language. Do not copy marketing copy. Do not overstate conclusions. If the study is skewed but still potentially useful, save it with strong caveats rather than rejecting it automatically.\n\nTag or classify the item\n- Topic: a short field summarizing the subject area\n- Use angle: a short field explaining how an editor could use it and how cautious they should be",
+    "exampleOutput": "Source\nReport: Nanit's 2026 Report: The State of Modern Parenthood\nPR contact: aportelli@swervestrategic.com\n\nCore summary\nBrand-sponsored Nanit report arguing that parenting tech can reduce stress, improve co-parent communication, and help balance caregiving during the newborn/infant/toddler stage. The most usable editorial angle is the narrower claim that shared access to baby data may lighten the invisible mental load and make co-parenting feel more collaborative.\n\nMethodology\nRelease date: Mar 4, 2026. Sample: over 1,600 U.S. parents of newborns, infants, and toddlers. Limitation: available summaries do not provide a full methodology breakdown; survey may reflect Nanit's existing user base rather than a neutral sample.\n\nKey stats\n- ~50% of parents say communication with their partner improved after having children\n- 56% say they share real-time parenting data such as sleep patterns and developmental milestones\n- ~60% of fathers say parenting tech helps them share responsibilities more equally\n- ~70% of mothers say real-time visibility helps them take breaks and trust their partner more\n- 80% say they celebrate baby's progress together because both have access to the information\n\nCaveats\nStrongly brand-commissioned and aligned with Nanit's business interest. Likely skewed toward parents already comfortable with connected baby-tech. U.S.-based sample — not a clean proxy for Canadian parents.\n\nBest use: Stories about the mental load of early parenting, co-parenting and division-of-labour pieces, baby-tech conversations, how dads/partners engage in newborn care.\n\nTopic: Co-parenting, baby tech, mental load\nUse angle: PR-source with usable framing around shared caregiving — pair with independent experts before leaning on it heavily.",
+    "humanCheck": [
+      "Always check for conflicts of interest — brand-commissioned studies should be flagged clearly before any editorial use.",
+      "Verify key statistics against the original source document, not just the press release summary.",
+      "The agent cannot assess story-level editorial merit — that judgment stays with you.",
+      "Do not use a study as a primary source in a published piece without independent verification of its methodology."
+    ],
+    "relatedPrompts": [
+      "inbox-triage",
+      "source-questions",
+      "content-brief-generator"
+    ],
+    "sourceTheme": "AI-assisted editorial workflow"
+  },
+  {
     "id": "image-alt-text-accessibility",
     "title": "Generate image alt descriptions for accessibility",
     "pillar": "Content Creation",
